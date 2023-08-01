@@ -1,0 +1,390 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'store/css/rolu.css' %}">
+
+
+</head>
+<body>
+
+
+<div class="verx">
+    <div class="dostavka_verx">
+        <a href="{% url 'dostavka' %}" style="text-decoration: none; color: white">Доставка та оплата</a>
+    </div>
+    <div class="vakansiy_verx">Вакансії</div>
+    <div class="pro_verx">Про нас</div>
+    <div class="spivrobitnuchtvo_verx">Співробітництво</div>
+
+
+
+    <a href="{% url 'profile' %}" class="korzuna_verx">
+        <img class="corzina_img_verx" src="{% static 'store/img/solar_cart-bold.svg' %}">
+    </a>
+
+
+    <div class="search-panel">
+        <form action="{% url 'search' %}" method="get">
+            <input id="search-input" type="text" name="q" placeholder="Пошук товарів">
+            <img id="search-icon" src="{% static 'store/img/lupa.svg' %}" alt="Search Icon">
+        </form>
+    </div>
+
+
+    <div class="header">
+        <div class="rounded-gradient-border container_logo">
+            <div class="rounded-logo">
+                <img class="imm" src="{% static 'store/img/logoi.svg' %}" alt="logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="call">
+        <img class="call_img_verx" src="{% static 'store/img/call.svg' %}" onclick="window.open('tel:+380660120101')">
+        <a href="tel:+380660120101"></a>
+
+    </div>
+
+
+    <div class="phone-numbers">
+        <span class="orange-number1">+38 (050) </span>
+        <span class="orange-number2">+38 (066) </span>
+        <span class="white-number1"> 012-01-01</span>
+        <span class="white-number2"> 670-10-01</span>
+    </div>
+</div>
+
+
+<a href="/" class="link_roli">Головна </a>
+<a class="link_roli2">/ Основні страви</a>
+
+
+<div class="carta_tovara_pizza">
+    <div class="row">
+        {% for product in products %}
+            {% if product.category == 'Основні страви' %}
+                <div class="col-md-3">
+                    <div class="carta_tovara_item" id="carta_puvo">
+                        <img class="card-img-top" src="{{ product.image }}" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title my-title">
+                                <a>{{ product.name }}</a>
+                            </h4>
+                            <div class="price_and_add">
+                                <h5>{{ product.price_for_view }} грн</h5>
+                                <a class="btn btn-outline-success btnnn" data-bs-toggle="modal"
+                                   data-bs-target="#modal{{ product.id }}" id="dodatu{{ product.product_id }}">
+                                    Додати +
+                                </a>
+                                <p id="product_final_{{ product.id }}"
+                                   style="display: none">{{ product.product_id }}</p>
+                            </div>
+                            <p style="display: none" id="pizza_category{{ product.id }}">{{ product.category }}</p>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="modal fade" id="modal{{ product.id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog my-modal-no-border">
+                        <div class="modal-content">
+                            <div class="modal-header1">
+                                <div class="modal-header1">
+                                    <h5 class="modal-title"
+                                        id="exampleModalLabel{{ product.id }}">{{ product.name }}</h5>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{ product.image }}" alt="" class="modal_img{{ product.id }}" id="modal_img">
+                                <p class="description_modal{{ product.id }}"
+                                   id="description_modal">{{ product.description }}</p>
+
+                                <!-- Поле для комментариев в модальном окне -->
+                                <div class="form-group">
+                                    <div class="comment-field">
+                                        <textarea class="form-control commentModal" id="commentModal{{ product.id }}"
+                                                  name="comment" rows="3"></textarea>
+                                        <label for="commentModal{{ product.id }}" class="comment-label">Коментар до
+                                            замовлення</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <h5 class="modal-price{{ product.id }}" id="modal-price">{{ product.price_for_view }}
+                                    грн</h5>
+                                <!-- Кнопка "Отправить" в модальном окне -->
+                                <button type="button" class="btn btn-outline-success btn_modal"
+                                        id="final_button{{ product.product_id }}"
+                                        data-product-id="{{ product.id }}">
+                                    Додати до кошика
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+
+<div class="nuz" style="top: 140%">
+    <div class="carta_sity">Карта сайту</div>
+    <div class="polosha_orange_nuz"></div>
+
+    <div class="pro_nac">Про нас</div>
+
+
+    <div class="doctavka_nuz">
+        <a href="{% url 'dostavka' %}" style="text-decoration: none; color: white">Доставка та оплата</a>
+    </div>
+
+    <div class="pro_nac">
+        <a href="{% url 'about_us' %}" style="text-decoration: none; color: white">Про нас</a>
+    </div>
+
+
+    <div class="rolu_nuz">
+        <a href="/" style="text-decoration: none; color: white">Роли</a>
+    </div>
+
+    <div class="pizza_nuz">
+        <a href="/" style="text-decoration: none; color: white">Піца</a>
+
+    </div>
+    <div class="salate_nuz">
+        <a href="/" style="text-decoration: none; color: white">Салати</a>
+    </div>
+
+    <div class="gariche_nuz">
+        <a href="/" style="text-decoration: none; color: white">Гаряче</a>
+
+    </div>
+    <div class="ocnovni_nuz">
+        <a href="/" style="text-decoration: none; color: white">Основні страви</a>
+    </div>
+    <div class="garniru_nuz">
+        <a href="/" style="text-decoration: none; color: white">Гарніри</a>
+    </div>
+    <div class="supu_nuz">
+        <a href="/" style="text-decoration: none; color: white">Супи</a>
+    </div>
+    <div class="zakusku_nuz">
+        <a href="/" style="text-decoration: none; color: white">Закуски</a>
+    </div>
+
+    <div class="hold_nuz">
+        <a href="/" style="text-decoration: none; color: white">Холодні напої</a>
+    </div>
+
+    <div class="puvo_nuz">
+        <a href="/" style="text-decoration: none; color: white">Пиво</a>
+    </div>
+
+    <div class="contact_nuz">Контакти</div>
+    <div class="polosha_orange_nuz2"></div>
+    <div class="number_nuz">+38 (050) 012-01-01</div>
+    <div class="number_nuz2">+38 (066) 670-10-01</div>
+    <div class="email_nuz">chef.in.ua@gmail.com</div>
+    <div class="adress_nuz">Катерининська площа, Одеса, Одеська область, 65000</div>
+    <img class="instagram" src="{% static 'store/img/instagram.png' %}" alt="logo">
+    <img class="telegram" src="{% static 'store/img/telegram.png' %}" alt="logo">
+    <img class="viber" src="{% static 'store/img/viber.png' %}" alt="logo">
+    <img class="facebook" src="{% static 'store/img/facebook.png' %}" alt="logo">
+    <div class="prava_nuz">© 2023 | Усі права захищені</div>
+
+    <header>
+        <div class="back_niz">
+            <div class="header">
+                <div class="rounded-gradient-border container_logo">
+                    <div class="rounded-logo">
+                        <img class="imm" src="{% static 'store/img/logoi.svg' %}" alt="logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <a href="https://www.instagram.com/chef_in_odessa/">
+        <img class="instagram" src="{% static 'store/img/instagram.png' %}" alt="logo">
+    </a>
+    <a href="https://t.me/Chefinodesabot">
+        <img class="telegram" src="{% static 'store/img/telegram.png' %}" alt="logo">
+    </a>
+    <img class="viber" src="{% static 'store/img/viber.png' %}" alt="logo">
+    <a href="https://www.facebook.com/chef.in.ua/">
+        <img class="facebook" src="{% static 'store/img/facebook.png' %}" alt="logo">
+    </a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+<script src="{% static 'store/js/index.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var addToCartButtons = document.querySelectorAll('.btn_modal');
+
+        addToCartButtons.forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                event.preventDefault();
+                var commentId = button.getAttribute('data-product-id');
+                var priceClass = '.modal-price' + commentId;
+
+                var priceElement = document.querySelector(priceClass);
+                var priceText = priceElement.textContent;
+                var price = priceText.match(/\d+/)[0];
+                var nameElement = document.querySelector('h5.modal-title#exampleModalLabel' + commentId);
+                var name = nameElement.textContent;
+                var imageElement = document.querySelector('.modal_img' + commentId);
+                var image = imageElement.getAttribute('src');
+                var descriptionClass = '.description_modal' + commentId;
+                var descriptionElement = document.querySelector(descriptionClass);
+                var description = descriptionElement.textContent;
+                // Получение комментария
+                var comment = document.getElementById('commentModal' + commentId).value;
+                let pizza_category = document.getElementById('pizza_category' + commentId).textContent
+
+                // Получение product_poster
+                var product_poster = document.getElementById('product_final_' + commentId).textContent;
+                // Получение ID продукта
+                var url = '/baskets/add/' + product_poster + '/';
+
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    },
+                    body: JSON.stringify({
+                        comment: comment,
+                        product_poster: product_poster,
+                        price: price,
+                        name: name,
+                        image: image,
+                        description: description,
+                        category: pizza_category,
+
+                    })
+                })
+                    .then(function (response) {
+                        if (response.ok) {
+                            fetchCartItems()
+                        }
+                    })
+                    .catch(function (error) {
+                        // Обработка ошибок
+                    });
+            });
+        });
+    });
+
+    function fetchCartItems() {
+        fetch('/cart/info/')
+            .then(function (response) {
+                if (response.ok) {
+                    return response.json();
+                }
+            })
+            .then(function (data) {
+                var productPosters = data.product_posters; // Получение списка product_poster
+                console.log(productPosters); // Вывод списка product_poster в консоль
+
+                // Изменение текста кнопки на Товар у кошику
+                productPosters.filter(Boolean).forEach(function (productPoster) {
+                    var buttonId = 'final_button' + productPoster;
+                    var button = document.getElementById(buttonId);
+                    let buttondodatu = 'dodatu' + productPoster;
+                    let buttonknopka = document.getElementById(buttondodatu);
+                    // Проверяем, есть ли button и buttonknopka на странице
+                    if (button && buttonknopka) {
+                        // Если есть, то меняем их текст
+                        buttonknopka.innerText = 'Товар у кошику';
+                        button.innerText = 'Товар у кошику';
+                    }
+                });
+
+            })
+            .catch(function (error) {
+                console.log('Error fetching cart items:', error);
+            });
+    }
+
+    fetchCartItems()
+
+
+    $(document).ready(function () {
+        $(".card-title.my-title a").each(function () {
+            if ($(this).text().length > 21) {
+                $(this).addClass("short-name");
+            }
+            if ($(this).text().length > 26) {
+                $(this).addClass("short-name1");
+            }
+        });
+    });
+
+    function toggleLanguage() {
+        var toggle = document.getElementById("languageToggle");
+        var currentLanguage = toggle.innerText;
+
+        if (currentLanguage === "RU") {
+            toggle.innerText = "UA";
+        } else {
+            toggle.innerText = "RU";
+        }
+    }
+
+    $(document).ready(function () {
+        $(".modal-title").each(function () {
+            if ($(this).text().length > 22) {
+                $(this).addClass("modal-title_large");
+            }
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var searchForm = document.querySelector(".search-panel form");
+        var searchIcon = document.querySelector("#search-icon");
+
+        searchIcon.addEventListener("click", function (event) {
+            event.preventDefault();
+            searchForm.submit();
+        });
+    });
+
+
+    $(document).ready(function () {
+        // Получаем последний элемент перед элементом .nuz
+        var lastElement = $(".nuz").prev();
+
+        // Вычисляем новое значение top
+        var newTop = lastElement.offset().top + lastElement.outerHeight() * 1.15;
+
+        // Устанавливаем новое значение top для элемента .nuz
+        $(".nuz").css("top", newTop);
+    });
+
+
+</script>
+
+
+</body>
+</html>

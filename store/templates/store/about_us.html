@@ -1,0 +1,248 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'store/css/style.css' %}">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+<div class="verx">
+
+    <div class="dostavka_verx">
+        <a href="{% url 'dostavka' %}" style="text-decoration: none; color: white">Доставка та оплата</a>
+    </div>
+    <div class="vakansiy_verx">
+        <a href="{% url 'vakansii' %}" style="text-decoration: none; color: white">Вакансії</a>
+    </div>
+    <div class="pro_verx">
+        <a href="{% url 'about_us' %}" style="text-decoration: none; color: white">Про нас</a>
+    </div>
+    <div class="spivrobitnuchtvo_verx">
+        <a href="{% url 'spivrobitnictvo' %}" style="text-decoration: none; color: white">Співробітництво</a>
+    </div>
+
+
+    <a href="{% url 'profile' %}" class="korzuna_verx">
+        <img class="corzina_img_verx" src="{% static 'store/img/solar_cart-bold.svg' %}">
+    </a>
+
+
+    <div class="search-panel">
+        <form action="{% url 'search' %}" method="get">
+            <input id="search-input" type="text" name="q" placeholder="Пошук товарів">
+            <img id="search-icon" src="{% static 'store/img/lupa.svg' %}" alt="Search Icon">
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('search-input');
+            searchInput.addEventListener('input', function () {
+                const inputValue = this.value;
+                const capitalizedValue = capitalizeFirstLetter(inputValue);
+                this.value = capitalizedValue;
+            });
+
+            function capitalizeFirstLetter(inputValue) {
+                return inputValue.charAt(0).toUpperCase() + inputValue.slice(1);
+            }
+        });
+    </script>
+
+
+     <div class="header">
+        <div class="rounded-gradient-border container_logo">
+            <div class="rounded-logo">
+                <a href="/">
+                    <img class="imm" src="{% static 'store/img/logoi.svg' %}" alt="logo">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="call">
+        <img class="call_img_verx" src="{% static 'store/img/call.svg' %}" onclick="window.open('tel:+380660120101')">
+        <a href="tel:+380660120101"></a>
+
+    </div>
+
+
+    <div class="phone-numbers">
+        <span class="orange-number1">+38 (050) </span>
+        <span class="orange-number2">+38 (066) </span>
+        <span class="white-number1"> 012-01-01</span>
+        <span class="white-number2"> 670-10-01</span>
+    </div>
+</div>
+
+
+<div class="photos_container_one">
+    {% for photo in about_us_photo %}
+        <img class="about_us_ph" src="{{ photo.image.url }}" alt="Image from database">
+    {% endfor %}
+</div>
+<div class="carta_saita_margin">
+    <div class="mobile_nuz_carta">
+        <div class="carta_sity_nuz">Карта сайту</div>
+        <div class="polosha_orange_nuz_mobile"></div>
+
+        <div class="doctavka_nuz_mobile">
+            <a href="{% url 'dostavka' %}" style="text-decoration: none; color: white">Доставка та оплата</a>
+        </div>
+        <div class="vacanciu_nuz_mobile">
+            <a href="{% url 'vakansii' %}" style="text-decoration: none; color: white">Вакансії</a>
+        </div>
+        <div class="pro_nac_mobile">
+            <a href="{% url 'about_us' %}" style="text-decoration: none; color: white">Про нас</a>
+        </div>
+        <div class="spiv_nac_mobile">
+            <a href="{% url 'spivrobitnictvo' %}" style="text-decoration: none; color: white">Співробітництво</a>
+        </div>
+
+
+        <div class="contact_nuz_mobile">Контакти</div>
+        <div class="polosha_orange_nuz_mobile2"></div>
+        <div class="number_nuz_mobile">+38 (050) 012-01-01</div>
+        <div class="number_nuz2_mobile">+38 (066) 670-10-01</div>
+        <div class="email_nuz_mobile">chef.in.ua@gmail.com</div>
+        <div class="adress_nuz_mobile">Катерининська площа, Одеса, Одеська область, 65000</div>
+
+        <a href="https://www.instagram.com/chef_in_odessa/">
+            <img class="instagram_mobile" src="{% static 'store/img/instagram.png' %}" alt="logo">
+        </a>
+        <a href="https://t.me/Chefinodesabot">
+            <img class="telegram_mobile" src="{% static 'store/img/telegram.png' %}" alt="logo">
+        </a>
+        <img class="viber_mobile" src="{% static 'store/img/viber.png' %}" alt="logo">
+        <a href="https://www.facebook.com/chef.in.ua/">
+            <img class="facebook_mobile" src="{% static 'store/img/facebook.png' %}" alt="logo">
+        </a>
+
+        <div class="prava_nuz_mobile">© 2023 | Усі права захищені</div>
+    </div>
+</div>
+
+<div class="nuz" style="top: 140%">
+    <div class="carta_sity">Карта сайту</div>
+    <div class="polosha_orange_nuz"></div>
+
+    <div class="pro_nac">Про нас</div>
+
+
+    <div class="doctavka_nuz">
+        <a href="{% url 'dostavka' %}" style="text-decoration: none; color: white">Доставка та оплата</a>
+    </div>
+
+    <div class="pro_nac">
+        <a href="{% url 'about_us' %}" style="text-decoration: none; color: white">Про нас</a>
+    </div>
+
+
+    <div class="rolu_nuz">
+        <a href="/" style="text-decoration: none; color: white">Роли</a>
+    </div>
+
+    <div class="pizza_nuz">
+        <a href="/" style="text-decoration: none; color: white">Піца</a>
+
+    </div>
+    <div class="salate_nuz">
+        <a href="/" style="text-decoration: none; color: white">Салати</a>
+    </div>
+
+    <div class="gariche_nuz">
+        <a href="/" style="text-decoration: none; color: white">Гаряче</a>
+
+    </div>
+    <div class="ocnovni_nuz">
+        <a href="/" style="text-decoration: none; color: white">Основні страви</a>
+    </div>
+    <div class="garniru_nuz">
+        <a href="/" style="text-decoration: none; color: white">Гарніри</a>
+    </div>
+    <div class="supu_nuz">
+        <a href="/" style="text-decoration: none; color: white">Супи</a>
+    </div>
+    <div class="zakusku_nuz">
+        <a href="/" style="text-decoration: none; color: white">Закуски</a>
+    </div>
+
+    <div class="hold_nuz">
+        <a href="/" style="text-decoration: none; color: white">Холодні напої</a>
+    </div>
+
+    <div class="puvo_nuz">
+        <a href="/" style="text-decoration: none; color: white">Пиво</a>
+    </div>
+
+    <div class="contact_nuz">Контакти</div>
+    <div class="polosha_orange_nuz2"></div>
+    <div class="number_nuz">+38 (050) 012-01-01</div>
+    <div class="number_nuz2">+38 (066) 670-10-01</div>
+    <div class="email_nuz">chef.in.ua@gmail.com</div>
+    <div class="adress_nuz">Катерининська площа, Одеса, Одеська область, 65000</div>
+    <img class="instagram" src="{% static 'store/img/instagram.png' %}" alt="logo">
+    <img class="telegram" src="{% static 'store/img/telegram.png' %}" alt="logo">
+    <img class="viber" src="{% static 'store/img/viber.png' %}" alt="logo">
+    <img class="facebook" src="{% static 'store/img/facebook.png' %}" alt="logo">
+    <div class="prava_nuz">© 2023 | Усі права захищені</div>
+
+    <header>
+        <div class="back_niz">
+            <div class="header">
+                <div class="rounded-gradient-border container_logo">
+                    <div class="rounded-logo">
+                        <img class="imm" src="{% static 'store/img/logoi.svg' %}" alt="logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <a href="https://www.instagram.com/chef_in_odessa/">
+        <img class="instagram" src="{% static 'store/img/instagram.png' %}" alt="logo">
+    </a>
+    <a href="https://t.me/Chefinodesabot">
+        <img class="telegram" src="{% static 'store/img/telegram.png' %}" alt="logo">
+    </a>
+    <img class="viber" src="{% static 'store/img/viber.png' %}" alt="logo">
+    <a href="https://www.facebook.com/chef.in.ua/">
+        <img class="facebook" src="{% static 'store/img/facebook.png' %}" alt="logo">
+    </a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+<script src="{% static 'store/js/index.js' %}"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var searchForm = document.querySelector(".search-panel form");
+        var searchIcon = document.querySelector("#search-icon");
+
+        searchIcon.addEventListener("click", function (event) {
+            event.preventDefault();
+            searchForm.submit();
+        });
+    });
+
+
+</script>
+
+</body>
+</html>

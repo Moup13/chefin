@@ -1,0 +1,5089 @@
+@media (min-width: 1405px) {
+
+    body {
+        background: rgba(0, 0, 0, 0.92);
+        overflow-x: hidden;
+        font-family: 'Futura PT', sans-serif;
+
+    }
+
+     .samui_niz{
+
+        color: #2c2a2a;
+        margin-top: 55%;
+        margin-left: 45%;
+         display: none;
+    }
+
+    .korzuna_verx {
+        position: absolute;
+        left: 91%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corzina_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .container_logo {
+        position: relative;
+
+        width: 20%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        height: 230px;
+        padding: 20px;
+
+        background: rgba(0, 0, 0, 0.61);
+
+
+    }
+
+
+    .rounded-gradient-border {
+        position: relative;
+        border-radius: 0px 130px 130px 0px;
+        box-shadow: 0 0 0 1px;
+        outline: 1px solid #5e5e5e;
+    }
+
+
+    .my-container {
+        position: absolute;
+        width: 1920px;
+        height: 225px;
+        left: 0px;
+        top: 0px;
+        background: #000000;
+    }
+
+
+    .my-image {
+        position: relative;
+        margin-left: auto;
+        right: -60%;
+        height: 80%;
+        top: 10%;
+
+
+        background-color: #fcfafa;
+        background-blend-mode: multiply;
+    }
+
+
+    .rectangle_one {
+        position: absolute;
+
+        width: 25%;
+        height: 100%;
+        background: rgb(11, 11, 11);
+        box-shadow: 0px 4px 12px rgb(248, 245, 245);
+        border-radius: 0px 1000px 1000px 0px;
+    }
+
+
+    .image-button {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 18%;
+        left: 290%;
+        border: 1px solid #E1643C;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-button img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+    .black {
+        box-sizing: border-box;
+
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        left: 1%;
+        top: 1.92%;
+        bottom: 96.15%;
+
+        background: rgba(0, 0, 0, 0.61);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+        border-radius: 1000px 0px 0px 1000px;
+        transform: rotate(180deg);
+    }
+
+
+    .dostavka_verx {
+        position: absolute;
+        top: 7%;
+        left: 43%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .vakansiy_verx {
+        position: absolute;
+        top: 7%;
+        left: 56%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .pro_verx {
+        position: absolute;
+        top: 7%;
+        left: 63%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .spivrobitnuchtvo_verx {
+        position: absolute;
+        top: 7%;
+        left: 70%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    #languageDropdown {
+        box-sizing: border-box;
+        position: absolute;
+        top: 5%;
+        left: 82%;
+        width: 96px;
+        height: 46px;
+        background: #1c1c1c;
+        color: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
+        border-radius: 1000px;
+        outline: 1px solid #E1643C;
+        line-height: 46px; /* Aligns the text vertically in the center */
+        text-align: center; /* Aligns the text horizontally in the center */
+        -webkit-appearance: none; /* Remove default arrow in Chrome and Safari */
+        -moz-appearance: none; /* Remove default arrow in Firefox */
+        appearance: none;
+
+    }
+
+
+    #languageDropdown option {
+        background: #8a8888; /* Set the background color of the options */
+        border-radius: 12px; /* Set the border radius for rounded corners */
+        padding: 15px; /* Add some padding to the options */
+        color: white; /* Set the text color of the options */
+
+    }
+
+
+    .korzuna_verx {
+        position: absolute;
+        left: 91%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corzina_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .search-panel {
+        position: absolute;
+        width: 408px;
+        height: 46px;
+        left: 43%;
+        top: 20%;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 22px;
+
+    }
+
+
+    img[alt="Search Icon"] {
+        position: absolute;
+        margin-left: -50px;
+        z-index: 9999;
+        /*border-radius: 50%;*/
+        /*outline: 1px solid #E1643C;*/
+    }
+
+
+    .search-panel input[type="text"] {
+        width: 90%;
+        height: 100%;
+        background: #1c1c1c;
+        box-shadow: 0 0 0 1px;
+        outline: 1px solid #a6a3a3;
+        border-radius: 22px;
+        color: #cbc9c9;
+        padding-left: 15px; /* Adjust the value as needed */
+    }
+
+
+    .call {
+        position: absolute;
+        left: 70%;
+        top: 20%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .call_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .phone-numbers {
+        /*font-size: 18px;*/
+
+    }
+
+    .orange-number1 {
+        position: absolute;
+        color: #E1643C;
+        left: 75%;
+        top: 20%;
+    }
+
+    .orange-number2 {
+        position: absolute;
+        color: #E1643C;
+        left: 75%;
+        top: 23%;
+
+    }
+
+    .white-number1 {
+        color: white;
+        position: absolute;
+        left: 79.7%;
+        top: 20%;
+    }
+
+    .white-number2 {
+        color: white;
+        position: absolute;
+        left: 79.7%;
+        top: 23%;
+    }
+
+    .verx {
+        background-color: black;
+    }
+
+
+    .carta_tovara {
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+
+    }
+
+    #languageToggle {
+        box-sizing: border-box;
+        position: absolute;
+        top: 5%;
+        left: 82%;
+        width: 96px;
+        height: 46px;
+        background: #1c1c1c;
+        color: #ffffff;
+        box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
+        border-radius: 1000px;
+        outline: 1px solid #e1643c;
+        line-height: 46px; /* Aligns the text vertically in the center */
+        text-align: center; /* Aligns the text horizontally in the center */
+        cursor: pointer;
+    }
+
+    .custom-container {
+        position: absolute;
+        margin-top: 88%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+    }
+
+
+    .carta_tovara_item .card-title {
+        font-size: 22px;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+
+    .card-title.my-title a.short-name {
+        font-size: 18px;
+        line-height: 32px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+
+    .carta_tovara_item .card-text {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: -55%;
+        color: #ADADAD;
+        font-family: "Arial", sans-serif;
+        font-style: italic;
+    }
+
+
+    .carta_tovara_item {
+        border-radius: 14px 14px 14px 14px;
+        margin-bottom: 3rem;
+        border: 2px solid gray;
+        width: 305px;
+        height: 450px;
+
+        /*background: rgba(255, 255, 255, 1)*/
+    }
+
+    .carta_tovara_item .card-img-top {
+        border-radius: 14px 14px 0px 0px;
+        width: 302px;
+        height: 215px;
+    }
+
+
+    .price_and_add {
+        margin-top: 45%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        color: #E1643C;
+    }
+
+    .basket_text_esli_net {
+        top: 60%;
+        left: 40%;
+        position: absolute;
+    }
+
+    .btnnn {
+        border-radius: 8px;
+
+        font-style: normal;
+        font-weight: 450;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height, or 122% */
+        background-color: #E1643C;
+        color: #FFFFFF;
+        border: 3px solid orangered; /* Золотая обводка */
+
+    }
+
+
+    .nuz {
+        width: 100%;
+        height: 60%;
+        position: absolute;
+        top: 100%;
+        background-color: #000000;
+    }
+
+
+    .carta_sity {
+        position: absolute;
+        top: 10%;
+        left: 30%;
+        font-style: normal;
+        font-weight: 450;
+        font-size: 24px;
+        line-height: 30px;
+        color: #373737;
+    }
+
+    .polosha_orange_nuz {
+        position: absolute;
+        top: 23%;
+        left: 30%;
+        width: 88px;
+        height: 3px;
+        background: #E1643C;
+    }
+
+    .doctavka_nuz {
+        position: absolute;
+        top: 32%;
+        left: 30%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .pro_nac {
+        position: absolute;
+        top: 42%;
+        left: 30%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .rolu_nuz {
+        position: absolute;
+        top: 52%;
+        left: 30%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .pizza_nuz {
+        position: absolute;
+        top: 62%;
+        left: 30%;
+        width: 191px;
+        height: 15px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .salate_nuz {
+        position: absolute;
+        top: 72%;
+        left: 30%;
+        width: 191px;
+        height: 15px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .ocnovni_nuz {
+        position: absolute;
+        top: 42%;
+        left: 50%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .garniru_nuz {
+        position: absolute;
+        top: 32%;
+        left: 50%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .supu_nuz {
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .zakusku_nuz {
+        position: absolute;
+        top: 62%;
+        left: 50%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .gariche_nuz {
+        position: absolute;
+        top: 72%;
+        left: 50%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .hold_nuz {
+        position: absolute;
+        top: 82%;
+        left: 50%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .puvo_nuz {
+        position: absolute;
+        top: 82%;
+        left: 30%;
+        width: 191px;
+        height: 15px;
+
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+    .contact_nuz {
+        position: absolute;
+        top: 10%;
+        left: 70%;
+        font-style: normal;
+        font-weight: 450;
+        font-size: 24px;
+        line-height: 30px;
+        color: #373737;
+    }
+
+    .polosha_orange_nuz2 {
+        position: absolute;
+        top: 23%;
+        left: 70%;
+        width: 88px;
+        height: 3px;
+        background: #E1643C;
+    }
+
+    .number_nuz {
+        width: 413px;
+        height: 15px;
+        position: absolute;
+        top: 30%;
+        left: 70%;
+
+        color: #FFFFFF;
+        white-space: nowrap;
+    }
+
+    .number_nuz2 {
+        width: 413px;
+        height: 15px;
+        position: absolute;
+        top: 40%;
+        left: 70%;
+
+        color: #FFFFFF;
+        white-space: nowrap;
+    }
+
+    .email_nuz {
+        width: 413px;
+        height: 15px;
+        position: absolute;
+        top: 50%;
+        left: 70%;
+
+        color: #FFFFFF;
+        white-space: nowrap;
+    }
+
+    .adress_nuz {
+        width: 413px;
+        height: 15px;
+        position: absolute;
+        top: 60%;
+        left: 70%;
+
+        color: #FFFFFF;
+        white-space: nowrap;
+    }
+
+    .instagram {
+        position: absolute;
+        top: 72%;
+        left: 6%;
+    }
+
+    .telegram {
+        position: absolute;
+        top: 72%;
+        left: 10%;
+    }
+
+    .viber {
+        position: absolute;
+        top: 72%;
+        left: 14%;
+    }
+
+    .facebook {
+        position: absolute;
+        top: 72%;
+        left: 18%;
+    }
+
+    .prava_nuz {
+        position: absolute;
+        top: 82%;
+        left: 6%;
+    }
+
+
+    .link_roli {
+        position: absolute;
+        width: 20%;
+        height: 22px;
+        left: 5%;
+        top: 40%;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 38px;
+        line-height: 22px;
+        color: #5e5e5e;
+        text-decoration: none;
+        transition: color 0.3s ease; /* Плавное изменение цвета при ховере */
+        z-index: 9999;
+    }
+
+    .link_roli:hover {
+        color: #E1643C; /* Изменение цвета на оранжевый при ховере */
+    }
+
+    .link_roli2 {
+        position: absolute;
+        width: 40%;
+        height: 22px;
+        left: 15%;
+        top: 40%;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 38px;
+        line-height: 22px;
+        color: #fcfcfc;
+        text-decoration: none;
+    }
+
+    .link_roli2:hover {
+        text-decoration: none;
+        color: #fcfcfc;
+        /* Дополнительные свойства ховера по необходимости */
+    }
+
+    /*.bask_one{*/
+    /*    position: absolute;*/
+    /*    color: white;*/
+    /*    left: 5%;*/
+    /*    top: 50%;*/
+    /*    font-size: 60px;*/
+    /*}*/
+    .coloni {
+        position: absolute;
+
+        width: 55%;
+
+        top: 60%;
+        left: 5%;
+        /*color: white;*/
+    }
+
+    .itogo {
+        position: absolute;
+        top: 60%;
+        left: 65%;
+        width: 413px;
+        height: 130px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        backdrop-filter: blur(8.5px);
+
+        background: rgba(0, 0, 0, 1);
+        font-size: 18px;
+        font-family: Futura PT;
+        font-weight: 300;
+        line-height: 22px;
+
+    }
+
+    .oplataa {
+        background: rgba(0, 0, 0, 1);
+        border-radius: 10px;
+    }
+
+    .promo_ihave {
+        background-color: transparent;
+        border: none;
+
+        color: #c4c2c2;
+        font-size: 18px;
+
+        font-weight: 300;
+        line-height: 22px;
+        cursor: pointer;
+        margin-left: 0%;
+        margin-top: 35%;
+    }
+
+    .splata2 {
+        position: absolute;
+        left: 5%;
+        top: 70%;
+
+        color: #c4c2c2;
+        font-size: 18px;
+
+        font-weight: 300;
+        line-height: 22px;
+    }
+
+
+    .ne_rabochii {
+        color: #c4c2c2;
+        font-size: 18px;
+        margin-top: 1%;
+        margin-left: 1.5%;
+    }
+
+    .underline {
+        display: inline-block;
+        color: #444343;
+        padding-bottom: 14px;
+    }
+
+    .backgrrr {
+        background-color: transparent;
+
+    }
+
+    .vvedit_pr {
+        margin-top: 3%;
+    }
+
+    .btn_promo_vvedit {
+        margin-top: 3%;
+
+
+        border-radius: 100px;
+        background: #E1643C;
+        color: #FFF;
+        font-size: 18px;
+        border: 1px solid orangered;
+
+
+    }
+
+
+    .price_itogo {
+        color: #E1643C;
+        text-align: right;
+        font-size: 30px;
+
+        position: absolute;
+        top: 26%;
+        right: 5%;
+    }
+
+    .btn_oformity_zakaz {
+
+        width: 231px;
+        height: 46px;
+
+        border-radius: 100px;
+        background: #E1643C;
+        color: #FFF;
+        font-size: 18px;
+        border: 1px solid orangered;
+        position: absolute;
+        left: 40%;
+        top: 50%;
+    }
+
+    .basket_zakaz {
+        position: absolute;
+        left: 5%;
+        top: 70%;
+
+
+    }
+
+    .basket_zakaz a {
+        text-decoration: none;
+        color: #8c8a8a;
+        font-size: 18px;
+
+        font-family: 'Futura PT', sans-serif;
+    }
+
+
+    .btn_oformity_zakaz::before,
+    .btn_oformity_zakaz::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid black;
+        border-radius: 100px;
+    }
+
+    .btn_oformity_zakaz::before {
+        z-index: -1;
+    }
+
+
+    .basket_img {
+        width: 305px;
+        height: 160px;
+        border-radius: 10px;
+        border: 1px solid #8f8c8c;
+    }
+
+    .basket_name {
+        display: flex;
+
+        color: #FFF;
+        text-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+        font-size: 30px;
+
+
+
+        position: absolute;
+        top: 0%;
+        left: 40%;
+    }
+
+    .basket_name_one {
+        display: flex;
+
+        color: #FFF;
+        text-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+        font-size: 25px;
+        width: 350px;
+
+
+        position: absolute;
+        top: 0%;
+        left: 40%;
+    }
+
+    .divider {
+        border-top: 2px solid #ffffff;
+        /*margin-top: 25%;*/
+        width: 100%;
+
+    }
+
+    .search-panel {
+        position: absolute;
+        width: 408px;
+        height: 46px;
+        left: 43%;
+        top: 20%;
+        /*background: rgba(255, 255, 255, 0.02);*/
+        border-radius: 22px;
+
+    }
+
+
+    img[alt="Search Icon"] {
+        position: absolute;
+        margin-left: -50px;
+        z-index: 9999;
+        /*border-radius: 50%;*/
+        /*outline: 1px solid #E1643C;*/
+    }
+
+
+    .search-panel input[type="text"] {
+        width: 370px;
+        height: 46px;
+        background: #1c1c1c;
+        /*box-shadow: 1px 0 0 0;*/
+        /*outline: 0.3px solid #eae7e7;*/
+        border-radius: 22px;
+        color: #cbc9c9;
+        padding-left: 25px; /* Adjust the value as needed */
+    }
+
+
+    .basket_photo {
+        position: absolute;
+        top: 0%;
+        left: 93%;
+
+    }
+
+    .remove-item {
+        background-color: transparent;
+        border: none;
+    }
+
+    .price_product {
+        position: absolute;
+        top: 80%;
+        left: 85%;
+        color: #E1643C;
+        font-size: 30px;
+
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    /*.product-details {*/
+    /*    margin-left: 10px;*/
+    /*}*/
+    .quantity {
+        position: absolute;
+        top: 70%;
+        left: 38%;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+
+
+    }
+
+    .no-border {
+        border: none;
+    }
+
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        background-color: transparent;
+        color: white;
+    }
+
+
+    .quantity-input.no-border {
+        border: none;
+        outline: none;
+        /* Дополнительные стили */
+    }
+
+    /*.quantity-input.no-border:focus {*/
+    /*  !* Дополнительные стили при фокусировке *!*/
+    /*}*/
+}
+
+@media (max-width: 699px) {
+    body {
+        background: #0D0D0D;
+        overflow-x: hidden;
+        font-family: 'Futura PT', sans-serif;
+
+    }
+
+
+ .porozn_koshik{
+        margin-top: 40%;
+
+    }
+    .dostavka_verx {
+        display: none;
+    }
+
+    .pro_verx {
+        display: none;
+    }
+
+    .spivrobitnuchtvo_verx {
+        display: none;
+    }
+
+    .vakansiy_verx {
+        display: none;
+    }
+
+    .search-panel {
+        display: none;
+    }
+
+
+
+    .phone-numbers {
+        display: none;
+    }
+
+    .polosha {
+        display: none;
+    }
+
+    #languageToggle {
+        display: none;
+    }
+
+    .korzuna_verx {
+
+
+        position: absolute;
+        left: 83%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corzina_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+
+    .call {
+        position: absolute;
+        left: 65%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .call_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+
+    .container_logo {
+        position: relative;
+
+        width: 30%;
+        height: 133px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+
+        padding: 20px;
+
+        background: rgba(0, 0, 0, 0.61);
+
+
+    }
+
+
+    .rounded-gradient-border {
+        position: relative;
+        border-radius: 0px 130px 130px 0px;
+        box-shadow: 0 0 0 1px;
+        outline: 1px solid #5e5e5e;
+    }
+
+    .imm {
+        width: 112px;
+        height: 112px;
+        margin-left: 10%;
+    }
+
+    .korzuna_verx {
+        position: absolute;
+        left: 83%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corzina_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .basket_img_main {
+        position: absolute;
+        top: 12%;
+        left: 5%;
+
+
+    }
+
+    .basket_img {
+        border-radius: 8px;
+        border: 1px solid #8f8c8c;
+        width: 159px;
+        height: 110px;
+    }
+
+    .card-body {
+
+        height: 150px;
+        background-color: transparent;
+        width: 100%;
+
+    }
+
+    .form-control {
+        display: block;
+        position: absolute;
+        width: 10%;
+        left: 50%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0.25rem;
+    }
+
+    .quantity {
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        display: flex;
+        align-items: center;
+    }
+
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        background-color: transparent;
+        color: white;
+    }
+
+    .quantity-input.no-border {
+        position: absolute;
+        left: 30%;
+        border: none;
+        outline: none;
+        /* Дополнительные стили */
+    }
+
+    .btn_photo_minus {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        margin-left: 5px;
+    }
+
+    .btn_photo_plus {
+        width: 25px;
+        height: 25px;
+        margin-left: 60px;
+
+    }
+
+    .photo_btn_plus {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        left: 70.5%;
+        top: 2%;
+
+
+    }
+
+    .photo_btn_minus {
+
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: -1%;
+        top: -2%;
+    }
+
+
+    .price_product {
+        position: absolute;
+        left: 80%;
+        top: 70%;
+        color: #E1643C;
+    }
+
+    .basket_name {
+        display: flex;
+
+        color: #FFF;
+        text-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+        font-size: 18px;
+
+        font-weight: 450;
+
+        position: absolute;
+        left: 51%;
+        top: 12%;
+    }
+
+    .basket_name_one {
+        display: flex;
+        color: #FFF;
+        text-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+        font-size: 15px;
+        width: 150px;
+        position: absolute;
+        left: 51%;
+        top: 12%;
+    }
+
+    .remove-item {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        left: 87%;
+        top: 4%;
+    }
+
+    .card-footer {
+        background-color: transparent;
+    }
+
+    .price_product {
+        position: absolute;
+    }
+
+    .link_roli {
+        text-decoration: none;
+        position: absolute;
+        top: 15.7%;
+        left: 5%;
+        color: white;
+    }
+
+    .link_roli2 {
+        position: absolute;
+        text-decoration: none;
+        top: 15.7%;
+        left: 25%;
+        color: white;
+    }
+
+    .backgrrr {
+        background-color: transparent;
+        margin-top: 4%;
+    }
+
+
+    .underline {
+        display: none;
+    }
+
+    .divider {
+        background-color: #FFFFFF;
+        z-index: 9999;
+        margin-top: -8%;
+    }
+
+    hr {
+        margin: -1rem 0;
+    }
+
+    .oplataa {
+        background-color: transparent;
+        border-radius: 30px;
+        margin-top: 10%;
+    }
+
+
+        /*   .coloni {*/
+    /*    position: absolute;*/
+
+    /*    width: 90%;*/
+
+    /*    top: 30%;*/
+    /*    left: 5%;*/
+    /*    !*color: white;*!*/
+    /*}*/
+    .btn_oformity_zakaz {
+
+        width: 231px;
+        height: 46px;
+
+        border-radius: 100px;
+        background: #E1643C;
+        color: #FFF;
+        font-size: 18px;
+        border: 1px solid orangered;
+        position: absolute;
+        left: 33%;
+        margin-top: 3%;
+    }
+
+    .btn_oformity_zakaz::before,
+    .btn_oformity_zakaz::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid black;
+        border-radius: 100px;
+    }
+
+    .btn_oformity_zakaz::before {
+        z-index: -1;
+    }
+
+    .splata2 {
+        position: absolute;
+        left: 35%;
+        top: 50%;
+
+        color: #c4c2c2;
+        font-size: 18px;
+
+        font-weight: 300;
+        line-height: 22px;
+    }
+       .price_itogo {
+        color: #E1643C;
+        text-align: right;
+        font-size: 30px;
+
+        position: absolute;
+        top: 5%;
+        right: 5%;
+    }
+    .samui_niz{
+
+        color: #2c2a2a;
+        margin-top: 25%;
+        margin-left: 25%;
+    }
+     .dostavka_verx1{
+        display: none;
+    }
+}
+
+@media (max-width: 380px) {
+
+
+    .porozn_koshik{
+        margin-top: 40%;
+
+    }
+     .dostavka_verx1{
+        display: none;
+    }
+
+    .link_roli {
+        text-decoration: none;
+        position: absolute;
+        top: 21%;
+        left: 5%;
+        color: #919090;
+    }
+
+    .link_roli2 {
+        position: absolute;
+        text-decoration: none;
+        top: 21%;
+        left: 24%;
+        color: white;
+    }
+
+
+    .samui_niz{
+
+        color: #2c2a2a;
+        margin-top: 25%;
+        margin-left: 25%;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1000px){
+
+    body {
+        background: rgba(0, 0, 0, 0.92);
+        overflow-x: hidden;
+        font-family: 'Futura PT', sans-serif;
+
+    }
+
+    .dostavka_verx1{
+        display: none;
+    }
+
+     .samui_niz{
+        position: relative;
+        color: #f5f1f1;
+        margin-top: 145%;
+        margin-left: 40%;
+         display: none;
+
+    }
+
+    .korzuna_verx {
+        position: absolute;
+        left: 91%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corzina_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .container_logo {
+        position: relative;
+
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        height: 230px;
+        padding: 20px;
+
+        background: rgba(0, 0, 0, 0.61);
+
+
+    }
+
+
+    .rounded-gradient-border {
+        position: relative;
+        border-radius: 0px 130px 130px 0px;
+        box-shadow: 0 0 0 1px;
+        outline: 1px solid #5e5e5e;
+    }
+
+
+
+
+
+
+
+
+    .rectangle_one {
+        position: absolute;
+
+        width: 25%;
+        height: 100%;
+        background: rgb(11, 11, 11);
+        box-shadow: 0px 4px 12px rgb(248, 245, 245);
+        border-radius: 0px 1000px 1000px 0px;
+    }
+
+
+    .image-button {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 18%;
+        left: 290%;
+        border: 1px solid #E1643C;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-button img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+
+
+
+    .dostavka_verx {
+        position: absolute;
+        top: 5%;
+        left: 27%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .vakansiy_verx {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .pro_verx {
+        position: absolute;
+        top: 5%;
+        left: 62%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .spivrobitnuchtvo_verx {
+        position: absolute;
+        top: 5%;
+        left: 75%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+
+
+
+    .korzuna_verx {
+        position: absolute;
+        left: 91%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    .corzina_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .search-panel {
+        position: absolute;
+        width: 408px;
+        height: 46px;
+        left: 43%;
+        top: 20%;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 22px;
+
+        display: none;
+
+    }
+
+
+    img[alt="Search Icon"] {
+        position: absolute;
+        margin-left: -50px;
+        z-index: 9999;
+        /*border-radius: 50%;*/
+        /*outline: 1px solid #E1643C;*/
+        display: none;
+    }
+
+
+    .search-panel input[type="text"] {
+        width: 90%;
+        height: 100%;
+        background: #1c1c1c;
+        box-shadow: 0 0 0 1px;
+        outline: 1px solid #a6a3a3;
+        border-radius: 22px;
+        color: #cbc9c9;
+        padding-left: 15px; /* Adjust the value as needed */
+        display: none;
+    }
+
+
+    .call {
+        position: absolute;
+        left: 60%;
+        top: 12%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .call_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .phone-numbers {
+        /*font-size: 18px;*/
+
+    }
+
+    .orange-number1 {
+        position: absolute;
+        color: #E1643C;
+        left: 71%;
+        top: 12%;
+    }
+
+    .orange-number2 {
+        position: absolute;
+        color: #E1643C;
+        left: 71%;
+        top: 14%;
+
+    }
+
+    .white-number1 {
+        color: white;
+        position: absolute;
+        left: 81%;
+        top: 12%;
+    }
+
+    .white-number2 {
+        color: white;
+        position: absolute;
+        left: 81%;
+        top: 14%;
+    }
+
+    .verx {
+        background-color: black;
+        width: 100%;
+    }
+
+
+    .carta_tovara {
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+
+    }
+
+    #languageToggle {
+        box-sizing: border-box;
+        position: absolute;
+        top: 5%;
+        left: 82%;
+        width: 96px;
+        height: 46px;
+        background: #1c1c1c;
+        color: #ffffff;
+        box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
+        border-radius: 1000px;
+        outline: 1px solid #e1643c;
+        line-height: 46px; /* Aligns the text vertically in the center */
+        text-align: center; /* Aligns the text horizontally in the center */
+        cursor: pointer;
+    }
+
+    .custom-container {
+        position: absolute;
+        margin-top: 88%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+    }
+
+
+    .carta_tovara_item .card-title {
+        font-size: 22px;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+
+    .card-title.my-title a.short-name {
+        font-size: 18px;
+        line-height: 32px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+
+    .carta_tovara_item .card-text {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: -55%;
+        color: #ADADAD;
+        font-family: "Arial", sans-serif;
+        font-style: italic;
+    }
+
+
+    .carta_tovara_item {
+        border-radius: 14px 14px 14px 14px;
+        margin-bottom: 3rem;
+        border: 2px solid gray;
+        width: 305px;
+        height: 450px;
+
+        /*background: rgba(255, 255, 255, 1)*/
+    }
+
+    .carta_tovara_item .card-img-top {
+        border-radius: 14px 14px 0px 0px;
+        width: 302px;
+        height: 215px;
+    }
+
+
+    .price_and_add {
+        margin-top: 45%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        color: #E1643C;
+    }
+
+    .basket_text_esli_net {
+
+        position: absolute;
+        top: 50%;
+        left: 35%;
+
+    }
+
+    .btnnn {
+        border-radius: 8px;
+
+        font-style: normal;
+        font-weight: 450;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height, or 122% */
+        background-color: #E1643C;
+        color: #FFFFFF;
+        border: 3px solid orangered; /* Золотая обводка */
+
+    }
+
+
+
+
+    .link_roli {
+        position: absolute;
+        width: 20%;
+        height: 22px;
+        left: 5%;
+        top: 24%;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 38px;
+        line-height: 22px;
+        color: #5e5e5e;
+        text-decoration: none;
+        transition: color 0.3s ease; /* Плавное изменение цвета при ховере */
+        z-index: 9999;
+    }
+
+    .link_roli:hover {
+        color: #E1643C; /* Изменение цвета на оранжевый при ховере */
+    }
+
+    .link_roli2 {
+        position: absolute;
+        width: 40%;
+        height: 22px;
+        left: 23%;
+        top: 24%;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 38px;
+        line-height: 22px;
+        color: #fcfcfc;
+        text-decoration: none;
+    }
+
+    .link_roli2:hover {
+        text-decoration: none;
+        color: #fcfcfc;
+        /* Дополнительные свойства ховера по необходимости */
+    }
+
+    /*.bask_one{*/
+    /*    position: absolute;*/
+    /*    color: white;*/
+    /*    left: 5%;*/
+    /*    top: 50%;*/
+    /*    font-size: 60px;*/
+    /*}*/
+    .coloni {
+        position: absolute;
+
+        width: 64%;
+
+        top: 30%;
+        left: 5%;
+        /*color: white;*/
+    }
+
+    .itogo {
+        position: absolute;
+        top: 30%;
+        left: 71%;
+        width: 170px;
+        height: 130px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        backdrop-filter: blur(8.5px);
+
+        background: rgba(0, 0, 0, 1);
+        font-size: 18px;
+        font-family: Futura PT;
+        font-weight: 300;
+        line-height: 22px;
+
+    }
+
+
+    .oplataa {
+        background: rgba(0, 0, 0, 1);
+        border-radius: 10px;
+    }
+
+    .promo_ihave {
+        background-color: transparent;
+        border: none;
+
+        color: #c4c2c2;
+        font-size: 18px;
+
+        font-weight: 300;
+        line-height: 22px;
+        cursor: pointer;
+        margin-left: 0%;
+        margin-top: 35%;
+    }
+
+    .splata2 {
+        position: absolute;
+        left: 5%;
+        top: 100%;
+
+        color: #e5e3e3;
+        font-size: 11px;
+
+        font-weight: 300;
+        line-height: 22px;
+    }
+
+
+    .ne_rabochii {
+        color: #c4c2c2;
+        font-size: 18px;
+        margin-top: 1%;
+        margin-left: 1.5%;
+    }
+
+    .underline {
+        display: none;
+        color: #444343;
+        padding-bottom: 14px;
+    }
+
+    .backgrrr {
+        background-color: transparent;
+
+    }
+
+    .vvedit_pr {
+        margin-top: 3%;
+    }
+
+    .btn_promo_vvedit {
+        margin-top: 3%;
+
+
+        border-radius: 100px;
+        background: #E1643C;
+        color: #FFF;
+        font-size: 18px;
+        border: 1px solid orangered;
+
+
+    }
+
+
+    .price_itogo {
+        color: #E1643C;
+        text-align: right;
+        font-size: 30px;
+
+        position: absolute;
+        top: 26%;
+        right: 5%;
+    }
+
+    .btn_oformity_zakaz {
+
+        width: 150px;
+        height: 56px;
+
+        border-radius: 100px;
+        background: #E1643C;
+        color: #faf9f9;
+        font-size: 16px;
+        border: 1px solid orangered;
+        position: absolute;
+        left: 5%;
+        top: 50%;
+
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .basket_zakaz {
+        position: absolute;
+        left: 5%;
+        top: 70%;
+
+
+    }
+
+    .basket_zakaz a {
+        text-decoration: none;
+        color: #8c8a8a;
+        font-size: 18px;
+
+        font-family: 'Futura PT', sans-serif;
+    }
+
+
+    .btn_oformity_zakaz::before,
+    .btn_oformity_zakaz::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid black;
+        border-radius: 100px;
+    }
+
+    .btn_oformity_zakaz::before {
+        z-index: -1;
+    }
+
+
+    .basket_img {
+        width: 345px;
+        height: 130px;
+        border-radius: 10px;
+        border: 1px solid #8f8c8c;
+    }
+
+    .basket_name {
+        display: flex;
+
+        color: #FFF;
+        text-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+        font-size: 30px;
+
+
+
+        position: absolute;
+        top: 0%;
+        left: 40%;
+    }
+
+    .basket_name_one {
+        display: flex;
+
+        color: #FFF;
+        text-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+        font-size: 20px;
+        width: 250px;
+
+
+        position: absolute;
+        top: 0%;
+        left: 40%;
+    }
+
+    .divider {
+        border-top: 2px solid #ffffff;
+        /*margin-top: 25%;*/
+        width: 100%;
+
+    }
+
+    .search-panel {
+        position: absolute;
+        width: 408px;
+        height: 46px;
+        left: 43%;
+        top: 20%;
+        /*background: rgba(255, 255, 255, 0.02);*/
+        border-radius: 22px;
+
+    }
+
+
+    img[alt="Search Icon"] {
+        position: absolute;
+        margin-left: -50px;
+        z-index: 9999;
+        /*border-radius: 50%;*/
+        /*outline: 1px solid #E1643C;*/
+    }
+
+
+    .search-panel input[type="text"] {
+        width: 370px;
+        height: 46px;
+        background: #1c1c1c;
+        /*box-shadow: 1px 0 0 0;*/
+        /*outline: 0.3px solid #eae7e7;*/
+        border-radius: 22px;
+        color: #cbc9c9;
+        padding-left: 25px; /* Adjust the value as needed */
+    }
+
+
+    .basket_photo {
+        position: absolute;
+        top: 0%;
+        left: 93%;
+
+    }
+
+    .remove-item {
+        background-color: transparent;
+        border: none;
+    }
+
+    .price_product {
+        position: absolute;
+        top: 80%;
+        left: 85%;
+        color: #E1643C;
+        font-size: 20px;
+
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    /*.product-details {*/
+    /*    margin-left: 10px;*/
+    /*}*/
+    .quantity {
+        position: absolute;
+        top: 70%;
+        left: 38%;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+
+
+    }
+
+    .no-border {
+        border: none;
+    }
+
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        background-color: transparent;
+        color: white;
+    }
+
+
+    .quantity-input.no-border {
+        border: none;
+        outline: none;
+        /* Дополнительные стили */
+    }
+
+    /*.quantity-input.no-border:focus {*/
+    /*  !* Дополнительные стили при фокусировке *!*/
+    /*}*/
+}
+
+
+@media (min-width: 1001px) and (max-width: 1160px){
+
+    body {
+        background: rgba(0, 0, 0, 0.92);
+        overflow-x: hidden;
+        font-family: 'Futura PT', sans-serif;
+
+    }
+
+    .dostavka_verx1{
+        display: none;
+    }
+
+     .samui_niz{
+        position: relative;
+        color: #f5f1f1;
+        margin-top: 145%;
+        margin-left: 40%;
+         display: none;
+
+    }
+
+    .korzuna_verx {
+        position: absolute;
+        left: 91%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corzina_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .container_logo {
+        position: relative;
+
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        height: 230px;
+        padding: 20px;
+
+        background: rgba(0, 0, 0, 0.61);
+
+
+    }
+
+
+    .rounded-gradient-border {
+        position: relative;
+        border-radius: 0px 130px 130px 0px;
+        box-shadow: 0 0 0 1px;
+        outline: 1px solid #5e5e5e;
+    }
+
+
+
+
+
+
+
+
+    .rectangle_one {
+        position: absolute;
+
+        width: 25%;
+        height: 100%;
+        background: rgb(11, 11, 11);
+        box-shadow: 0px 4px 12px rgb(248, 245, 245);
+        border-radius: 0px 1000px 1000px 0px;
+    }
+
+
+    .image-button {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 18%;
+        left: 290%;
+        border: 1px solid #E1643C;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-button img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+
+
+
+    .dostavka_verx {
+        position: absolute;
+        top: 5%;
+        left: 41%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .vakansiy_verx {
+        position: absolute;
+        top: 5%;
+        left: 60%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .pro_verx {
+        position: absolute;
+        top: 5%;
+        left: 70%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .spivrobitnuchtvo_verx {
+        position: absolute;
+        top: 5%;
+        left: 80%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+
+
+
+    .korzuna_verx {
+        position: absolute;
+        left: 91%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    .corzina_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .search-panel {
+        position: absolute;
+        width: 408px;
+        height: 46px;
+        left: 43%;
+        top: 20%;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 22px;
+
+        display: none;
+
+    }
+
+
+    img[alt="Search Icon"] {
+        position: absolute;
+        margin-left: -50px;
+        z-index: 9999;
+        /*border-radius: 50%;*/
+        /*outline: 1px solid #E1643C;*/
+        display: none;
+    }
+
+
+    .search-panel input[type="text"] {
+        width: 90%;
+        height: 100%;
+        background: #1c1c1c;
+        box-shadow: 0 0 0 1px;
+        outline: 1px solid #a6a3a3;
+        border-radius: 22px;
+        color: #cbc9c9;
+        padding-left: 15px; /* Adjust the value as needed */
+        display: none;
+    }
+
+
+    .call {
+        position: absolute;
+        left: 71%;
+        top: 12.2%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .call_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .phone-numbers {
+        /*font-size: 18px;*/
+
+    }
+
+    .orange-number1 {
+        position: absolute;
+        color: #E1643C;
+        left: 77%;
+        top: 12%;
+    }
+
+    .orange-number2 {
+        position: absolute;
+        color: #E1643C;
+        left: 77%;
+        top: 16%;
+
+    }
+
+    .white-number1 {
+        color: white;
+        position: absolute;
+        left: 85%;
+        top: 12%;
+    }
+
+    .white-number2 {
+        color: white;
+        position: absolute;
+        left: 85%;
+        top: 16%;
+    }
+
+    .verx {
+        background-color: black;
+        width: 100%;
+    }
+
+
+    .carta_tovara {
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+
+    }
+
+    #languageToggle {
+        box-sizing: border-box;
+        position: absolute;
+        top: 5%;
+        left: 82%;
+        width: 96px;
+        height: 46px;
+        background: #1c1c1c;
+        color: #ffffff;
+        box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
+        border-radius: 1000px;
+        outline: 1px solid #e1643c;
+        line-height: 46px; /* Aligns the text vertically in the center */
+        text-align: center; /* Aligns the text horizontally in the center */
+        cursor: pointer;
+    }
+
+    .custom-container {
+        position: absolute;
+        margin-top: 88%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+    }
+
+
+    .carta_tovara_item .card-title {
+        font-size: 22px;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+
+    .card-title.my-title a.short-name {
+        font-size: 18px;
+        line-height: 32px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+
+    .carta_tovara_item .card-text {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: -55%;
+        color: #ADADAD;
+        font-family: "Arial", sans-serif;
+        font-style: italic;
+    }
+
+
+    .carta_tovara_item {
+        border-radius: 14px 14px 14px 14px;
+        margin-bottom: 3rem;
+        border: 2px solid gray;
+        width: 305px;
+        height: 450px;
+
+        /*background: rgba(255, 255, 255, 1)*/
+    }
+
+    .carta_tovara_item .card-img-top {
+        border-radius: 14px 14px 0px 0px;
+        width: 302px;
+        height: 215px;
+    }
+
+
+    .price_and_add {
+        margin-top: 45%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        color: #E1643C;
+    }
+
+    .basket_text_esli_net {
+        top: 50%;
+        left: 35%;
+        position: absolute;
+    }
+
+    .btnnn {
+        border-radius: 8px;
+
+        font-style: normal;
+        font-weight: 450;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height, or 122% */
+        background-color: #E1643C;
+        color: #FFFFFF;
+        border: 3px solid orangered; /* Золотая обводка */
+
+    }
+
+
+
+
+    .link_roli {
+        position: absolute;
+        width: 20%;
+        height: 22px;
+        left: 5%;
+        top: 41%;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 38px;
+        line-height: 22px;
+        color: #5e5e5e;
+        text-decoration: none;
+        transition: color 0.3s ease; /* Плавное изменение цвета при ховере */
+        z-index: 9999;
+    }
+
+    .link_roli:hover {
+        color: #E1643C; /* Изменение цвета на оранжевый при ховере */
+    }
+
+    .link_roli2 {
+        position: absolute;
+        width: 40%;
+        height: 22px;
+        left: 21%;
+        top: 41%;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 38px;
+        line-height: 22px;
+        color: #fcfcfc;
+        text-decoration: none;
+    }
+
+    .link_roli2:hover {
+        text-decoration: none;
+        color: #fcfcfc;
+        /* Дополнительные свойства ховера по необходимости */
+    }
+
+    /*.bask_one{*/
+    /*    position: absolute;*/
+    /*    color: white;*/
+    /*    left: 5%;*/
+    /*    top: 50%;*/
+    /*    font-size: 60px;*/
+    /*}*/
+    .coloni {
+        position: absolute;
+
+        width: 65%;
+
+        top: 50%;
+        left: 5%;
+        /*color: white;*/
+    }
+
+    .itogo {
+        position: absolute;
+        top: 50%;
+        left: 71%;
+        width: 220px;
+        height: 130px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        backdrop-filter: blur(8.5px);
+
+        background: rgba(0, 0, 0, 1);
+        font-size: 18px;
+        font-family: Futura PT;
+        font-weight: 300;
+        line-height: 22px;
+
+    }
+
+
+    .oplataa {
+        background: rgba(0, 0, 0, 1);
+        border-radius: 10px;
+    }
+
+    .promo_ihave {
+        background-color: transparent;
+        border: none;
+
+        color: #c4c2c2;
+        font-size: 18px;
+
+        font-weight: 300;
+        line-height: 22px;
+        cursor: pointer;
+        margin-left: 0%;
+        margin-top: 35%;
+    }
+
+    .splata2 {
+        position: absolute;
+        left: 5%;
+        top: 80%;
+
+        color: #e5e3e3;
+        font-size: 18px;
+
+        font-weight: 300;
+        line-height: 22px;
+    }
+
+
+    .ne_rabochii {
+        color: #c4c2c2;
+        font-size: 18px;
+        margin-top: 1%;
+        margin-left: 1.5%;
+    }
+
+    .underline {
+        display: none;
+        color: #444343;
+        padding-bottom: 14px;
+    }
+
+    .backgrrr {
+        background-color: transparent;
+
+    }
+
+    .vvedit_pr {
+        margin-top: 3%;
+    }
+
+    .btn_promo_vvedit {
+        margin-top: 3%;
+
+
+        border-radius: 100px;
+        background: #E1643C;
+        color: #FFF;
+        font-size: 18px;
+        border: 1px solid orangered;
+
+
+    }
+
+
+    .price_itogo {
+        color: #E1643C;
+        text-align: right;
+        font-size: 30px;
+
+        position: absolute;
+        top: 26%;
+        right: 5%;
+    }
+
+    .btn_oformity_zakaz {
+
+        width: 200px;
+        height: 46px;
+
+        border-radius: 100px;
+        background: #E1643C;
+        color: #faf9f9;
+        font-size: 16px;
+        border: 1px solid orangered;
+        position: absolute;
+        left: 5%;
+        top: 50%;
+
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .basket_zakaz {
+        position: absolute;
+        left: 5%;
+        top: 70%;
+
+
+    }
+
+    .basket_zakaz a {
+        text-decoration: none;
+        color: #8c8a8a;
+        font-size: 18px;
+
+        font-family: 'Futura PT', sans-serif;
+    }
+
+
+    .btn_oformity_zakaz::before,
+    .btn_oformity_zakaz::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid black;
+        border-radius: 100px;
+    }
+
+    .btn_oformity_zakaz::before {
+        z-index: -1;
+    }
+
+
+    .basket_img {
+        width: 345px;
+        height: 130px;
+        border-radius: 10px;
+        border: 1px solid #8f8c8c;
+    }
+
+    .basket_name {
+        display: flex;
+
+        color: #FFF;
+        text-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+        font-size: 30px;
+
+
+
+        position: absolute;
+        top: 0%;
+        left: 40%;
+    }
+
+    .basket_name_one {
+        display: flex;
+
+        color: #FFF;
+        text-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+        font-size: 20px;
+        width: 250px;
+
+
+        position: absolute;
+        top: 0%;
+        left: 40%;
+    }
+
+    .divider {
+        border-top: 2px solid #ffffff;
+        /*margin-top: 25%;*/
+        width: 100%;
+
+    }
+
+    .search-panel {
+        position: absolute;
+        width: 408px;
+        height: 46px;
+        left: 43%;
+        top: 20%;
+        /*background: rgba(255, 255, 255, 0.02);*/
+        border-radius: 22px;
+
+    }
+
+
+    img[alt="Search Icon"] {
+        position: absolute;
+        margin-left: -50px;
+        z-index: 9999;
+        /*border-radius: 50%;*/
+        /*outline: 1px solid #E1643C;*/
+    }
+
+
+    .search-panel input[type="text"] {
+        width: 370px;
+        height: 46px;
+        background: #1c1c1c;
+        /*box-shadow: 1px 0 0 0;*/
+        /*outline: 0.3px solid #eae7e7;*/
+        border-radius: 22px;
+        color: #cbc9c9;
+        padding-left: 25px; /* Adjust the value as needed */
+    }
+
+
+    .basket_photo {
+        position: absolute;
+        top: 0%;
+        left: 93%;
+
+    }
+
+    .remove-item {
+        background-color: transparent;
+        border: none;
+    }
+
+    .price_product {
+        position: absolute;
+        top: 80%;
+        left: 85%;
+        color: #E1643C;
+        font-size: 20px;
+
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    /*.product-details {*/
+    /*    margin-left: 10px;*/
+    /*}*/
+    .quantity {
+        position: absolute;
+        top: 70%;
+        left: 38%;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+
+
+    }
+
+    .no-border {
+        border: none;
+    }
+
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        background-color: transparent;
+        color: white;
+    }
+
+
+    .quantity-input.no-border {
+        border: none;
+        outline: none;
+        /* Дополнительные стили */
+    }
+
+    /*.quantity-input.no-border:focus {*/
+    /*  !* Дополнительные стили при фокусировке *!*/
+    /*}*/
+}
+
+@media (min-width: 1161px) and (max-width: 1300px){
+
+    body {
+        background: rgba(0, 0, 0, 0.92);
+        overflow-x: hidden;
+        font-family: 'Futura PT', sans-serif;
+
+    }
+
+    .dostavka_verx1{
+        display: none;
+    }
+
+     .samui_niz{
+        position: relative;
+        color: #f5f1f1;
+        margin-top: 145%;
+        margin-left: 40%;
+         display: none;
+
+    }
+
+    .korzuna_verx {
+        position: absolute;
+        left: 91%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corzina_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .container_logo {
+        position: relative;
+
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        height: 230px;
+        padding: 20px;
+
+        background: rgba(0, 0, 0, 0.61);
+
+
+    }
+
+
+    .rounded-gradient-border {
+        position: relative;
+        border-radius: 0px 130px 130px 0px;
+        box-shadow: 0 0 0 1px;
+        outline: 1px solid #5e5e5e;
+    }
+
+
+
+
+
+
+
+
+    .rectangle_one {
+        position: absolute;
+
+        width: 25%;
+        height: 100%;
+        background: rgb(11, 11, 11);
+        box-shadow: 0px 4px 12px rgb(248, 245, 245);
+        border-radius: 0px 1000px 1000px 0px;
+    }
+
+
+    .image-button {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 18%;
+        left: 290%;
+        border: 1px solid #E1643C;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-button img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+
+
+
+    .dostavka_verx {
+        position: absolute;
+        top: 5%;
+        left: 41%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .vakansiy_verx {
+        position: absolute;
+        top: 5%;
+        left: 60%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .pro_verx {
+        position: absolute;
+        top: 5%;
+        left: 70%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .spivrobitnuchtvo_verx {
+        position: absolute;
+        top: 5%;
+        left: 80%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+
+
+
+    .korzuna_verx {
+        position: absolute;
+        left: 91%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    .corzina_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .search-panel {
+        position: absolute;
+        width: 408px;
+        height: 46px;
+        left: 43%;
+        top: 20%;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 22px;
+
+        display: none;
+
+    }
+
+
+    img[alt="Search Icon"] {
+        position: absolute;
+        margin-left: -50px;
+        z-index: 9999;
+        /*border-radius: 50%;*/
+        /*outline: 1px solid #E1643C;*/
+        display: none;
+    }
+
+
+    .search-panel input[type="text"] {
+        width: 90%;
+        height: 100%;
+        background: #1c1c1c;
+        box-shadow: 0 0 0 1px;
+        outline: 1px solid #a6a3a3;
+        border-radius: 22px;
+        color: #cbc9c9;
+        padding-left: 15px; /* Adjust the value as needed */
+        display: none;
+    }
+
+
+    .call {
+        position: absolute;
+        left: 73%;
+        top: 12.6%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .call_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .phone-numbers {
+        /*font-size: 18px;*/
+
+    }
+
+    .orange-number1 {
+        position: absolute;
+        color: #E1643C;
+        left: 78%;
+        top: 12%;
+    }
+
+    .orange-number2 {
+        position: absolute;
+        color: #E1643C;
+        left: 78%;
+        top: 16%;
+
+    }
+
+    .white-number1 {
+        color: white;
+        position: absolute;
+        left: 84%;
+        top: 12%;
+    }
+
+    .white-number2 {
+        color: white;
+        position: absolute;
+        left: 84%;
+        top: 16%;
+    }
+
+    .verx {
+        background-color: black;
+        width: 100%;
+    }
+
+
+    .carta_tovara {
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+
+    }
+
+    #languageToggle {
+        box-sizing: border-box;
+        position: absolute;
+        top: 5%;
+        left: 82%;
+        width: 96px;
+        height: 46px;
+        background: #1c1c1c;
+        color: #ffffff;
+        box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
+        border-radius: 1000px;
+        outline: 1px solid #e1643c;
+        line-height: 46px; /* Aligns the text vertically in the center */
+        text-align: center; /* Aligns the text horizontally in the center */
+        cursor: pointer;
+    }
+
+    .custom-container {
+        position: absolute;
+        margin-top: 88%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+    }
+
+
+    .carta_tovara_item .card-title {
+        font-size: 22px;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+
+    .card-title.my-title a.short-name {
+        font-size: 18px;
+        line-height: 32px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+
+    .carta_tovara_item .card-text {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: -55%;
+        color: #ADADAD;
+        font-family: "Arial", sans-serif;
+        font-style: italic;
+    }
+
+
+    .carta_tovara_item {
+        border-radius: 14px 14px 14px 14px;
+        margin-bottom: 3rem;
+        border: 2px solid gray;
+        width: 305px;
+        height: 450px;
+
+        /*background: rgba(255, 255, 255, 1)*/
+    }
+
+    .carta_tovara_item .card-img-top {
+        border-radius: 14px 14px 0px 0px;
+        width: 302px;
+        height: 215px;
+    }
+
+
+    .price_and_add {
+        margin-top: 45%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        color: #E1643C;
+    }
+
+    .basket_text_esli_net {
+        top: 50%;
+        left: 35%;
+        position: absolute;
+    }
+
+    .btnnn {
+        border-radius: 8px;
+
+        font-style: normal;
+        font-weight: 450;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height, or 122% */
+        background-color: #E1643C;
+        color: #FFFFFF;
+        border: 3px solid orangered; /* Золотая обводка */
+
+    }
+
+
+
+
+    .link_roli {
+        position: absolute;
+        width: 20%;
+        height: 22px;
+        left: 5%;
+        top: 33%;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 38px;
+        line-height: 22px;
+        color: #5e5e5e;
+        text-decoration: none;
+        transition: color 0.3s ease; /* Плавное изменение цвета при ховере */
+        z-index: 9999;
+    }
+
+    .link_roli:hover {
+        color: #E1643C; /* Изменение цвета на оранжевый при ховере */
+    }
+
+    .link_roli2 {
+        position: absolute;
+        width: 40%;
+        height: 22px;
+        left: 17%;
+        top: 33%;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 38px;
+        line-height: 22px;
+        color: #fcfcfc;
+        text-decoration: none;
+    }
+
+    .link_roli2:hover {
+        text-decoration: none;
+        color: #fcfcfc;
+        /* Дополнительные свойства ховера по необходимости */
+    }
+
+    /*.bask_one{*/
+    /*    position: absolute;*/
+    /*    color: white;*/
+    /*    left: 5%;*/
+    /*    top: 50%;*/
+    /*    font-size: 60px;*/
+    /*}*/
+    .coloni {
+        position: absolute;
+
+        width: 65%;
+
+        top: 42%;
+        left: 5%;
+        /*color: white;*/
+    }
+
+    .itogo {
+        position: absolute;
+        top: 42%;
+        left: 73%;
+        width: 220px;
+        height: 130px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        backdrop-filter: blur(8.5px);
+
+        background: rgba(0, 0, 0, 1);
+        font-size: 18px;
+        font-family: Futura PT;
+        font-weight: 300;
+        line-height: 22px;
+
+    }
+
+
+    .oplataa {
+        background: rgba(0, 0, 0, 1);
+        border-radius: 10px;
+    }
+
+    .promo_ihave {
+        background-color: transparent;
+        border: none;
+
+        color: #c4c2c2;
+        font-size: 18px;
+
+        font-weight: 300;
+        line-height: 22px;
+        cursor: pointer;
+        margin-left: 0%;
+        margin-top: 35%;
+    }
+
+    .splata2 {
+        position: absolute;
+        left: 5%;
+        top: 80%;
+
+        color: #e5e3e3;
+        font-size: 18px;
+
+        font-weight: 300;
+        line-height: 22px;
+    }
+
+
+    .ne_rabochii {
+        color: #c4c2c2;
+        font-size: 18px;
+        margin-top: 1%;
+        margin-left: 1.5%;
+    }
+
+    .underline {
+        display: none;
+        color: #444343;
+        padding-bottom: 14px;
+    }
+
+    .backgrrr {
+        background-color: transparent;
+
+    }
+
+    .vvedit_pr {
+        margin-top: 3%;
+    }
+
+    .btn_promo_vvedit {
+        margin-top: 3%;
+
+
+        border-radius: 100px;
+        background: #E1643C;
+        color: #FFF;
+        font-size: 18px;
+        border: 1px solid orangered;
+
+
+    }
+
+
+    .price_itogo {
+        color: #E1643C;
+        text-align: right;
+        font-size: 30px;
+
+        position: absolute;
+        top: 26%;
+        right: 5%;
+    }
+
+    .btn_oformity_zakaz {
+
+        width: 200px;
+        height: 46px;
+
+        border-radius: 100px;
+        background: #E1643C;
+        color: #faf9f9;
+        font-size: 16px;
+        border: 1px solid orangered;
+        position: absolute;
+        left: 5%;
+        top: 50%;
+
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .basket_zakaz {
+        position: absolute;
+        left: 5%;
+        top: 70%;
+
+
+    }
+
+    .basket_zakaz a {
+        text-decoration: none;
+        color: #8c8a8a;
+        font-size: 18px;
+
+        font-family: 'Futura PT', sans-serif;
+    }
+
+
+    .btn_oformity_zakaz::before,
+    .btn_oformity_zakaz::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid black;
+        border-radius: 100px;
+    }
+
+    .btn_oformity_zakaz::before {
+        z-index: -1;
+    }
+
+
+    .basket_img {
+        width: 345px;
+        height: 130px;
+        border-radius: 10px;
+        border: 1px solid #8f8c8c;
+    }
+
+    .basket_name {
+        display: flex;
+
+        color: #FFF;
+        text-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+        font-size: 30px;
+
+
+
+        position: absolute;
+        top: 0%;
+        left: 40%;
+    }
+
+    .basket_name_one {
+        display: flex;
+
+        color: #FFF;
+        text-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+        font-size: 20px;
+        width: 250px;
+
+
+        position: absolute;
+        top: 0%;
+        left: 40%;
+    }
+
+    .divider {
+        border-top: 2px solid #ffffff;
+        /*margin-top: 25%;*/
+        width: 100%;
+
+    }
+
+    .search-panel {
+        position: absolute;
+        width: 408px;
+        height: 46px;
+        left: 43%;
+        top: 20%;
+        /*background: rgba(255, 255, 255, 0.02);*/
+        border-radius: 22px;
+
+    }
+
+
+    img[alt="Search Icon"] {
+        position: absolute;
+        margin-left: -50px;
+        z-index: 9999;
+        /*border-radius: 50%;*/
+        /*outline: 1px solid #E1643C;*/
+    }
+
+
+    .search-panel input[type="text"] {
+        width: 370px;
+        height: 46px;
+        background: #1c1c1c;
+        /*box-shadow: 1px 0 0 0;*/
+        /*outline: 0.3px solid #eae7e7;*/
+        border-radius: 22px;
+        color: #cbc9c9;
+        padding-left: 25px; /* Adjust the value as needed */
+    }
+
+
+    .basket_photo {
+        position: absolute;
+        top: 0%;
+        left: 93%;
+
+    }
+
+    .remove-item {
+        background-color: transparent;
+        border: none;
+    }
+
+    .price_product {
+        position: absolute;
+        top: 80%;
+        left: 85%;
+        color: #E1643C;
+        font-size: 20px;
+
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    /*.product-details {*/
+    /*    margin-left: 10px;*/
+    /*}*/
+    .quantity {
+        position: absolute;
+        top: 70%;
+        left: 38%;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+
+
+    }
+
+    .no-border {
+        border: none;
+    }
+
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        background-color: transparent;
+        color: white;
+    }
+
+
+    .quantity-input.no-border {
+        border: none;
+        outline: none;
+        /* Дополнительные стили */
+    }
+
+    /*.quantity-input.no-border:focus {*/
+    /*  !* Дополнительные стили при фокусировке *!*/
+    /*}*/
+}
+
+@media (min-width: 1301px) and (max-width: 1400px){
+
+    body {
+        background: rgba(0, 0, 0, 0.92);
+        overflow-x: hidden;
+        font-family: 'Futura PT', sans-serif;
+
+    }
+
+    .dostavka_verx1{
+        display: none;
+    }
+
+     .samui_niz{
+        position: relative;
+        color: #f5f1f1;
+        margin-top: 145%;
+        margin-left: 40%;
+         display: none;
+
+    }
+
+    .korzuna_verx {
+        position: absolute;
+        left: 91%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corzina_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .container_logo {
+        position: relative;
+
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        height: 230px;
+        padding: 20px;
+
+        background: rgba(0, 0, 0, 0.61);
+
+
+    }
+
+
+    .rounded-gradient-border {
+        position: relative;
+        border-radius: 0px 130px 130px 0px;
+        box-shadow: 0 0 0 1px;
+        outline: 1px solid #5e5e5e;
+    }
+
+
+
+
+
+
+
+
+    .rectangle_one {
+        position: absolute;
+
+        width: 25%;
+        height: 100%;
+        background: rgb(11, 11, 11);
+        box-shadow: 0px 4px 12px rgb(248, 245, 245);
+        border-radius: 0px 1000px 1000px 0px;
+    }
+
+
+    .image-button {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 18%;
+        left: 290%;
+        border: 1px solid #E1643C;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-button img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+
+
+
+    .dostavka_verx {
+        position: absolute;
+        top: 5%;
+        left: 41%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .vakansiy_verx {
+        position: absolute;
+        top: 5%;
+        left: 60%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .pro_verx {
+        position: absolute;
+        top: 5%;
+        left: 70%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .spivrobitnuchtvo_verx {
+        position: absolute;
+        top: 5%;
+        left: 80%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+
+
+
+    .korzuna_verx {
+        position: absolute;
+        left: 91%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    .corzina_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .search-panel {
+        position: absolute;
+        width: 408px;
+        height: 46px;
+        left: 43%;
+        top: 20%;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 22px;
+
+        display: none;
+
+    }
+
+
+    img[alt="Search Icon"] {
+        position: absolute;
+        margin-left: -50px;
+        z-index: 9999;
+        /*border-radius: 50%;*/
+        /*outline: 1px solid #E1643C;*/
+        display: none;
+    }
+
+
+    .search-panel input[type="text"] {
+        width: 90%;
+        height: 100%;
+        background: #1c1c1c;
+        box-shadow: 0 0 0 1px;
+        outline: 1px solid #a6a3a3;
+        border-radius: 22px;
+        color: #cbc9c9;
+        padding-left: 15px; /* Adjust the value as needed */
+        display: none;
+    }
+
+
+    .call {
+        position: absolute;
+        left: 73%;
+        top: 12.6%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .call_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .phone-numbers {
+        /*font-size: 18px;*/
+
+    }
+
+    .orange-number1 {
+        position: absolute;
+        color: #E1643C;
+        left: 78%;
+        top: 12%;
+    }
+
+    .orange-number2 {
+        position: absolute;
+        color: #E1643C;
+        left: 78%;
+        top: 16%;
+
+    }
+
+    .white-number1 {
+        color: white;
+        position: absolute;
+        left: 84%;
+        top: 12%;
+    }
+
+    .white-number2 {
+        color: white;
+        position: absolute;
+        left: 84%;
+        top: 16%;
+    }
+
+    .verx {
+        background-color: black;
+        width: 100%;
+    }
+
+
+    .carta_tovara {
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+
+    }
+
+    #languageToggle {
+        box-sizing: border-box;
+        position: absolute;
+        top: 5%;
+        left: 82%;
+        width: 96px;
+        height: 46px;
+        background: #1c1c1c;
+        color: #ffffff;
+        box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
+        border-radius: 1000px;
+        outline: 1px solid #e1643c;
+        line-height: 46px; /* Aligns the text vertically in the center */
+        text-align: center; /* Aligns the text horizontally in the center */
+        cursor: pointer;
+    }
+
+    .custom-container {
+        position: absolute;
+        margin-top: 88%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+    }
+
+
+    .carta_tovara_item .card-title {
+        font-size: 22px;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+
+    .card-title.my-title a.short-name {
+        font-size: 18px;
+        line-height: 32px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+
+    .carta_tovara_item .card-text {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: -55%;
+        color: #ADADAD;
+        font-family: "Arial", sans-serif;
+        font-style: italic;
+    }
+
+
+    .carta_tovara_item {
+        border-radius: 14px 14px 14px 14px;
+        margin-bottom: 3rem;
+        border: 2px solid gray;
+        width: 305px;
+        height: 450px;
+
+        /*background: rgba(255, 255, 255, 1)*/
+    }
+
+    .carta_tovara_item .card-img-top {
+        border-radius: 14px 14px 0px 0px;
+        width: 302px;
+        height: 215px;
+    }
+
+
+    .price_and_add {
+        margin-top: 45%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        color: #E1643C;
+    }
+
+    .basket_text_esli_net {
+        top: 30%;
+        left: 35%;
+        position: absolute;
+    }
+
+    .btnnn {
+        border-radius: 8px;
+
+        font-style: normal;
+        font-weight: 450;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height, or 122% */
+        background-color: #E1643C;
+        color: #FFFFFF;
+        border: 3px solid orangered; /* Золотая обводка */
+
+    }
+
+
+
+
+    .link_roli {
+        position: absolute;
+        width: 20%;
+        height: 22px;
+        left: 5%;
+        top: 28%;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 38px;
+        line-height: 22px;
+        color: #5e5e5e;
+        text-decoration: none;
+        transition: color 0.3s ease; /* Плавное изменение цвета при ховере */
+        z-index: 9999;
+    }
+
+    .link_roli:hover {
+        color: #E1643C; /* Изменение цвета на оранжевый при ховере */
+    }
+
+    .link_roli2 {
+        position: absolute;
+        width: 40%;
+        height: 22px;
+        left: 17%;
+        top: 28%;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 38px;
+        line-height: 22px;
+        color: #fcfcfc;
+        text-decoration: none;
+    }
+
+    .link_roli2:hover {
+        text-decoration: none;
+        color: #fcfcfc;
+        /* Дополнительные свойства ховера по необходимости */
+    }
+
+    /*.bask_one{*/
+    /*    position: absolute;*/
+    /*    color: white;*/
+    /*    left: 5%;*/
+    /*    top: 50%;*/
+    /*    font-size: 60px;*/
+    /*}*/
+    .coloni {
+        position: absolute;
+
+        width: 65%;
+
+        top: 34%;
+        left: 5%;
+        /*color: white;*/
+    }
+
+    .itogo {
+        position: absolute;
+        top: 34%;
+        left: 73%;
+        width: 220px;
+        height: 130px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        backdrop-filter: blur(8.5px);
+
+        background: rgba(0, 0, 0, 1);
+        font-size: 18px;
+        font-family: Futura PT;
+        font-weight: 300;
+        line-height: 22px;
+
+    }
+
+
+    .oplataa {
+        background: rgba(0, 0, 0, 1);
+        border-radius: 10px;
+    }
+
+    .promo_ihave {
+        background-color: transparent;
+        border: none;
+
+        color: #c4c2c2;
+        font-size: 18px;
+
+        font-weight: 300;
+        line-height: 22px;
+        cursor: pointer;
+        margin-left: 0%;
+        margin-top: 35%;
+    }
+
+    .splata2 {
+        position: absolute;
+        left: 5%;
+        top: 80%;
+
+        color: #e5e3e3;
+        font-size: 18px;
+
+        font-weight: 300;
+        line-height: 22px;
+    }
+
+
+    .ne_rabochii {
+        color: #c4c2c2;
+        font-size: 18px;
+        margin-top: 1%;
+        margin-left: 1.5%;
+    }
+
+    .underline {
+        display: none;
+        color: #444343;
+        padding-bottom: 14px;
+    }
+
+    .backgrrr {
+        background-color: transparent;
+
+    }
+
+    .vvedit_pr {
+        margin-top: 3%;
+    }
+
+    .btn_promo_vvedit {
+        margin-top: 3%;
+
+
+        border-radius: 100px;
+        background: #E1643C;
+        color: #FFF;
+        font-size: 18px;
+        border: 1px solid orangered;
+
+
+    }
+
+
+    .price_itogo {
+        color: #E1643C;
+        text-align: right;
+        font-size: 30px;
+
+        position: absolute;
+        top: 26%;
+        right: 5%;
+    }
+
+    .btn_oformity_zakaz {
+
+        width: 200px;
+        height: 46px;
+
+        border-radius: 100px;
+        background: #E1643C;
+        color: #faf9f9;
+        font-size: 16px;
+        border: 1px solid orangered;
+        position: absolute;
+        left: 5%;
+        top: 50%;
+
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .basket_zakaz {
+        position: absolute;
+        left: 5%;
+        top: 70%;
+
+
+    }
+
+    .basket_zakaz a {
+        text-decoration: none;
+        color: #8c8a8a;
+        font-size: 18px;
+
+        font-family: 'Futura PT', sans-serif;
+    }
+
+
+    .btn_oformity_zakaz::before,
+    .btn_oformity_zakaz::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid black;
+        border-radius: 100px;
+    }
+
+    .btn_oformity_zakaz::before {
+        z-index: -1;
+    }
+
+
+    .basket_img {
+        width: 345px;
+        height: 130px;
+        border-radius: 10px;
+        border: 1px solid #8f8c8c;
+    }
+
+    .basket_name {
+        display: flex;
+
+        color: #FFF;
+        text-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+        font-size: 30px;
+
+
+
+        position: absolute;
+        top: 0%;
+        left: 40%;
+    }
+
+    .basket_name_one {
+        display: flex;
+
+        color: #FFF;
+        text-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+        font-size: 20px;
+        width: 250px;
+
+
+        position: absolute;
+        top: 0%;
+        left: 40%;
+    }
+
+    .divider {
+        border-top: 2px solid #ffffff;
+        /*margin-top: 25%;*/
+        width: 100%;
+
+    }
+
+    .search-panel {
+        position: absolute;
+        width: 408px;
+        height: 46px;
+        left: 43%;
+        top: 20%;
+        /*background: rgba(255, 255, 255, 0.02);*/
+        border-radius: 22px;
+
+    }
+
+
+    img[alt="Search Icon"] {
+        position: absolute;
+        margin-left: -50px;
+        z-index: 9999;
+        /*border-radius: 50%;*/
+        /*outline: 1px solid #E1643C;*/
+    }
+
+
+    .search-panel input[type="text"] {
+        width: 370px;
+        height: 46px;
+        background: #1c1c1c;
+        /*box-shadow: 1px 0 0 0;*/
+        /*outline: 0.3px solid #eae7e7;*/
+        border-radius: 22px;
+        color: #cbc9c9;
+        padding-left: 25px; /* Adjust the value as needed */
+    }
+
+
+    .basket_photo {
+        position: absolute;
+        top: 0%;
+        left: 93%;
+
+    }
+
+    .remove-item {
+        background-color: transparent;
+        border: none;
+    }
+
+    .price_product {
+        position: absolute;
+        top: 80%;
+        left: 85%;
+        color: #E1643C;
+        font-size: 20px;
+
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    /*.product-details {*/
+    /*    margin-left: 10px;*/
+    /*}*/
+    .quantity {
+        position: absolute;
+        top: 70%;
+        left: 38%;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+
+
+    }
+
+    .no-border {
+        border: none;
+    }
+
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        background-color: transparent;
+        color: white;
+    }
+
+
+    .quantity-input.no-border {
+        border: none;
+        outline: none;
+        /* Дополнительные стили */
+    }
+
+    /*.quantity-input.no-border:focus {*/
+    /*  !* Дополнительные стили при фокусировке *!*/
+    /*}*/
+}
+
+
+@media (min-width: 1001px) and (max-width: 1160px) and (min-height: 1300px){
+
+    body {
+        background: rgba(0, 0, 0, 0.92);
+        overflow-x: hidden;
+        font-family: 'Futura PT', sans-serif;
+
+    }
+
+    .dostavka_verx1{
+        display: none;
+    }
+
+     .samui_niz{
+        position: relative;
+        color: #f5f1f1;
+        margin-top: 145%;
+        margin-left: 40%;
+         display: none;
+
+    }
+
+    .korzuna_verx {
+        position: absolute;
+        left: 91%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corzina_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .container_logo {
+        position: relative;
+
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        height: 230px;
+        padding: 20px;
+
+        background: rgba(0, 0, 0, 0.61);
+
+
+    }
+
+
+    .rounded-gradient-border {
+        position: relative;
+        border-radius: 0px 130px 130px 0px;
+        box-shadow: 0 0 0 1px;
+        outline: 1px solid #5e5e5e;
+    }
+
+
+
+
+
+
+
+
+    .rectangle_one {
+        position: absolute;
+
+        width: 25%;
+        height: 100%;
+        background: rgb(11, 11, 11);
+        box-shadow: 0px 4px 12px rgb(248, 245, 245);
+        border-radius: 0px 1000px 1000px 0px;
+    }
+
+
+    .image-button {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 18%;
+        left: 290%;
+        border: 1px solid #E1643C;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-button img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+
+
+
+    .dostavka_verx {
+        position: absolute;
+        top: 5%;
+        left: 41%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .vakansiy_verx {
+        position: absolute;
+        top: 5%;
+        left: 60%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .pro_verx {
+        position: absolute;
+        top: 5%;
+        left: 70%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+    .spivrobitnuchtvo_verx {
+        position: absolute;
+        top: 5%;
+        left: 80%;
+        color: #FFFFFF;
+        width: 140px;
+        height: 15px;
+        white-space: nowrap;
+    }
+
+
+
+
+    .korzuna_verx {
+        position: absolute;
+        left: 91%;
+        top: 5%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    .corzina_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .search-panel {
+        position: absolute;
+        width: 408px;
+        height: 46px;
+        left: 43%;
+        top: 20%;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 22px;
+
+        display: none;
+
+    }
+
+
+    img[alt="Search Icon"] {
+        position: absolute;
+        margin-left: -50px;
+        z-index: 9999;
+        /*border-radius: 50%;*/
+        /*outline: 1px solid #E1643C;*/
+        display: none;
+    }
+
+
+    .search-panel input[type="text"] {
+        width: 90%;
+        height: 100%;
+        background: #1c1c1c;
+        box-shadow: 0 0 0 1px;
+        outline: 1px solid #a6a3a3;
+        border-radius: 22px;
+        color: #cbc9c9;
+        padding-left: 15px; /* Adjust the value as needed */
+        display: none;
+    }
+
+
+    .call {
+        position: absolute;
+        left: 71%;
+        top: 12.2%;
+        background: #1c1c1c;
+        outline: 1px solid #E1643C;
+        width: 45.25px; /* Размер изображения */
+        height: 45.25px; /* Размер изображения */
+        border-radius: 50%; /* Создаем круглую форму */
+        display: flex; /* Располагаем содержимое по центру по горизонтали и вертикали */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .call_img_verx {
+        width: 60%;
+        height: 60%;
+    }
+
+    .phone-numbers {
+        /*font-size: 18px;*/
+
+    }
+
+    .orange-number1 {
+        position: absolute;
+        color: #E1643C;
+        left: 77%;
+        top: 12%;
+    }
+
+    .orange-number2 {
+        position: absolute;
+        color: #E1643C;
+        left: 77%;
+        top: 14%;
+
+    }
+
+    .white-number1 {
+        color: white;
+        position: absolute;
+        left: 85%;
+        top: 12%;
+    }
+
+    .white-number2 {
+        color: white;
+        position: absolute;
+        left: 85%;
+        top: 14%;
+    }
+
+    .verx {
+        background-color: black;
+        width: 100%;
+    }
+
+
+    .carta_tovara {
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+
+    }
+
+    #languageToggle {
+        box-sizing: border-box;
+        position: absolute;
+        top: 5%;
+        left: 82%;
+        width: 96px;
+        height: 46px;
+        background: #1c1c1c;
+        color: #ffffff;
+        box-shadow: 0px 4px 4px rgba(187, 187, 187, 0.08);
+        border-radius: 1000px;
+        outline: 1px solid #e1643c;
+        line-height: 46px; /* Aligns the text vertically in the center */
+        text-align: center; /* Aligns the text horizontally in the center */
+        cursor: pointer;
+    }
+
+    .custom-container {
+        position: absolute;
+        margin-top: 88%;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+
+        border-radius: 14px;
+    }
+
+
+    .carta_tovara_item .card-title {
+        font-size: 22px;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+
+    .card-title.my-title a.short-name {
+        font-size: 18px;
+        line-height: 32px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+
+    .carta_tovara_item .card-text {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: -55%;
+        color: #ADADAD;
+        font-family: "Arial", sans-serif;
+        font-style: italic;
+    }
+
+
+    .carta_tovara_item {
+        border-radius: 14px 14px 14px 14px;
+        margin-bottom: 3rem;
+        border: 2px solid gray;
+        width: 305px;
+        height: 450px;
+
+        /*background: rgba(255, 255, 255, 1)*/
+    }
+
+    .carta_tovara_item .card-img-top {
+        border-radius: 14px 14px 0px 0px;
+        width: 302px;
+        height: 215px;
+    }
+
+
+    .price_and_add {
+        margin-top: 45%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        color: #E1643C;
+    }
+
+    .basket_text_esli_net {
+        top: 30%;
+        left: 35%;
+        position: absolute;
+    }
+
+    .btnnn {
+        border-radius: 8px;
+
+        font-style: normal;
+        font-weight: 450;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height, or 122% */
+        background-color: #E1643C;
+        color: #FFFFFF;
+        border: 3px solid orangered; /* Золотая обводка */
+
+    }
+
+
+
+
+    .link_roli {
+        position: absolute;
+        width: 20%;
+        height: 22px;
+        left: 5%;
+        top: 21%;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 38px;
+        line-height: 22px;
+        color: #5e5e5e;
+        text-decoration: none;
+        transition: color 0.3s ease; /* Плавное изменение цвета при ховере */
+        z-index: 9999;
+    }
+
+    .link_roli:hover {
+        color: #E1643C; /* Изменение цвета на оранжевый при ховере */
+    }
+
+    .link_roli2 {
+        position: absolute;
+        width: 40%;
+        height: 22px;
+        left: 21%;
+        top: 21%;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 38px;
+        line-height: 22px;
+        color: #fcfcfc;
+        text-decoration: none;
+    }
+
+    .link_roli2:hover {
+        text-decoration: none;
+        color: #fcfcfc;
+        /* Дополнительные свойства ховера по необходимости */
+    }
+
+    /*.bask_one{*/
+    /*    position: absolute;*/
+    /*    color: white;*/
+    /*    left: 5%;*/
+    /*    top: 50%;*/
+    /*    font-size: 60px;*/
+    /*}*/
+    .coloni {
+        position: absolute;
+
+        width: 65%;
+
+        top: 27%;
+        left: 5%;
+        /*color: white;*/
+    }
+
+    .itogo {
+        position: absolute;
+        top: 27%;
+        left: 71%;
+        width: 220px;
+        height: 130px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        backdrop-filter: blur(8.5px);
+
+        background: rgba(0, 0, 0, 1);
+        font-size: 18px;
+        font-family: Futura PT;
+        font-weight: 300;
+        line-height: 22px;
+
+    }
+
+
+    .oplataa {
+        background: rgba(0, 0, 0, 1);
+        border-radius: 10px;
+    }
+
+    .promo_ihave {
+        background-color: transparent;
+        border: none;
+
+        color: #c4c2c2;
+        font-size: 18px;
+
+        font-weight: 300;
+        line-height: 22px;
+        cursor: pointer;
+        margin-left: 0%;
+        margin-top: 35%;
+    }
+
+    .splata2 {
+        position: absolute;
+        left: 5%;
+        top: 80%;
+
+        color: #e5e3e3;
+        font-size: 18px;
+
+        font-weight: 300;
+        line-height: 22px;
+    }
+
+
+    .ne_rabochii {
+        color: #c4c2c2;
+        font-size: 18px;
+        margin-top: 1%;
+        margin-left: 1.5%;
+    }
+
+    .underline {
+        display: none;
+        color: #444343;
+        padding-bottom: 14px;
+    }
+
+    .backgrrr {
+        background-color: transparent;
+
+    }
+
+    .vvedit_pr {
+        margin-top: 3%;
+    }
+
+    .btn_promo_vvedit {
+        margin-top: 3%;
+
+
+        border-radius: 100px;
+        background: #E1643C;
+        color: #FFF;
+        font-size: 18px;
+        border: 1px solid orangered;
+
+
+    }
+
+
+    .price_itogo {
+        color: #E1643C;
+        text-align: right;
+        font-size: 30px;
+
+        position: absolute;
+        top: 26%;
+        right: 5%;
+    }
+
+    .btn_oformity_zakaz {
+
+        width: 200px;
+        height: 46px;
+
+        border-radius: 100px;
+        background: #E1643C;
+        color: #faf9f9;
+        font-size: 16px;
+        border: 1px solid orangered;
+        position: absolute;
+        left: 5%;
+        top: 50%;
+
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .basket_zakaz {
+        position: absolute;
+        left: 5%;
+        top: 70%;
+
+
+    }
+
+    .basket_zakaz a {
+        text-decoration: none;
+        color: #8c8a8a;
+        font-size: 18px;
+
+        font-family: 'Futura PT', sans-serif;
+    }
+
+
+    .btn_oformity_zakaz::before,
+    .btn_oformity_zakaz::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 1px solid black;
+        border-radius: 100px;
+    }
+
+    .btn_oformity_zakaz::before {
+        z-index: -1;
+    }
+
+
+    .basket_img {
+        width: 345px;
+        height: 130px;
+        border-radius: 10px;
+        border: 1px solid #8f8c8c;
+    }
+
+    .basket_name {
+        display: flex;
+
+        color: #FFF;
+        text-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+        font-size: 30px;
+
+
+
+        position: absolute;
+        top: 0%;
+        left: 40%;
+    }
+
+    .basket_name_one {
+        display: flex;
+
+        color: #FFF;
+        text-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.12);
+        font-size: 20px;
+        width: 250px;
+
+
+        position: absolute;
+        top: 0%;
+        left: 40%;
+    }
+
+    .divider {
+        border-top: 2px solid #ffffff;
+        /*margin-top: 25%;*/
+        width: 100%;
+
+    }
+
+    .search-panel {
+        position: absolute;
+        width: 408px;
+        height: 46px;
+        left: 43%;
+        top: 20%;
+        /*background: rgba(255, 255, 255, 0.02);*/
+        border-radius: 22px;
+
+    }
+
+
+    img[alt="Search Icon"] {
+        position: absolute;
+        margin-left: -50px;
+        z-index: 9999;
+        /*border-radius: 50%;*/
+        /*outline: 1px solid #E1643C;*/
+    }
+
+
+    .search-panel input[type="text"] {
+        width: 370px;
+        height: 46px;
+        background: #1c1c1c;
+        /*box-shadow: 1px 0 0 0;*/
+        /*outline: 0.3px solid #eae7e7;*/
+        border-radius: 22px;
+        color: #cbc9c9;
+        padding-left: 25px; /* Adjust the value as needed */
+    }
+
+
+    .basket_photo {
+        position: absolute;
+        top: 0%;
+        left: 93%;
+
+    }
+
+    .remove-item {
+        background-color: transparent;
+        border: none;
+    }
+
+    .price_product {
+        position: absolute;
+        top: 80%;
+        left: 85%;
+        color: #E1643C;
+        font-size: 20px;
+
+        font-weight: 500;
+        word-wrap: break-word;
+    }
+
+    /*.product-details {*/
+    /*    margin-left: 10px;*/
+    /*}*/
+    .quantity {
+        position: absolute;
+        top: 70%;
+        left: 38%;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+
+
+    }
+
+    .no-border {
+        border: none;
+    }
+
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        background-color: transparent;
+        color: white;
+    }
+
+
+    .quantity-input.no-border {
+        border: none;
+        outline: none;
+        /* Дополнительные стили */
+    }
+
+    /*.quantity-input.no-border:focus {*/
+    /*  !* Дополнительные стили при фокусировке *!*/
+    /*}*/
+}

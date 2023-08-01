@@ -1,0 +1,916 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'store/css/rolu.css' %}">
+
+
+</head>
+<body>
+
+
+<div class="verx">
+    <div class="dostavka_verx">
+        <a href="{% url 'dostavka' %}" style="text-decoration: none; color: white">Доставка та оплата</a>
+    </div>
+    <div class="vakansiy_verx">Вакансії</div>
+    <div class="pro_verx">Про нас</div>
+    <div class="spivrobitnuchtvo_verx">Співробітництво</div>
+
+
+
+
+    <a href="{% url 'profile' %}" class="korzuna_verx">
+        <img class="corzina_img_verx" src="{% static 'store/img/solar_cart-bold.svg' %}">
+    </a>
+
+
+    <div class="search-panel">
+        <form action="{% url 'search' %}" method="get">
+            <input id="search-input" type="text" name="q" placeholder="Пошук товарів">
+            <img id="search-icon" src="{% static 'store/img/lupa.svg' %}" alt="Search Icon">
+        </form>
+    </div>
+
+
+    <div class="header">
+        <div class="rounded-gradient-border container_logo">
+            <div class="rounded-logo">
+                <img class="imm" src="{% static 'store/img/logoi.svg' %}" alt="logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="call">
+        <img class="call_img_verx" src="{% static 'store/img/call.svg' %}" onclick="window.open('tel:+380660120101')">
+        <a href="tel:+380660120101"></a>
+
+    </div>
+
+
+    <div class="phone-numbers">
+        <span class="orange-number1">+38 (050) </span>
+        <span class="orange-number2">+38 (066) </span>
+        <span class="white-number1"> 012-01-01</span>
+        <span class="white-number2"> 670-10-01</span>
+    </div>
+</div>
+
+
+<a href="/" class="link_roli">Головна </a>
+<a class="link_roli2">/ Роли</a>
+
+
+<div class="carta_tovara_pizza">
+    <div class="row">
+        {% for product in products %}
+            {% if product.category == 'Роли' %}
+                <div class="col-md-3">
+                    <div class="carta_tovara_item" id="rolu_carta">
+                        <img class="card-img-top" src="{{ product.image }}" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title my-title">
+                                <a>{{ product.name }}</a>
+                            </h4>
+                            <div class="price_and_add">
+                                <h5>{{ product.price_for_view }} грн</h5>
+                                <a class="btn btn-outline-success btnnn" data-bs-toggle="modal"
+                                   data-bs-target="#modal{{ product.id }}" id="dodatu{{ product.product_id }}">
+                                    Додати +
+                                </a>
+                                <p id="product_final_{{ product.id }}"
+                                   style="display: none">{{ product.product_id }}</p>
+                            </div>
+                            <p style="display: none" id="pizza_category{{ product.id }}">{{ product.category }}</p>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div id="modal{{ product.id }}" class="modal" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog my-modal" role="document">
+
+                        <div class="modal-content modal_pizza">
+                            <div class="modal-header">
+                                <h5 class="pizza_title" id="exampleModalLabel{{ product.id }}">{{ product.name }}</h5>
+                            </div>
+                            <div class="modal-body">
+                                <p id="pizza_poduct_poster{{ product.id }}"
+                                   style="display: none">{{ product.product_id }}</p>
+                                <img src="{{ product.image }}" alt="photo" class="modal_img_pizza"
+                                     id="pizza_product_image{{ product.id }}">
+                                <p class="vaga">Вага: 450гр</p>
+                                <p class="rozmir">Розмір: 30см</p>
+                                <p class="description_modal{{ product.id }}"
+                                   style="display: none">{{ product.description }}</p>
+                                <p class="description_modal_pizza">{{ product.description }}</p>
+
+
+                                <div class="dropdown tip_testa">
+
+
+                                    <p id="product_final_{{ product.id }}"
+                                       style="display: none">{{ product.product_id }}</p>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </div>
+
+                                <p class="sous">Cоус для ролов</p>
+
+                                <div class="form-check checker">
+                                    <input class="form-check-input chhhh1" type="checkbox" value="0"
+                                           id="flexCheckDefault" onclick="handleCheckboxClick0(this)">
+                                    <label class="form-check-lbael" for="flexCheckDefault"
+                                           id="soucbbq0{{ product.id }}"></label>
+                                </div>
+
+
+                                <div class="form-check checker2">
+                                    <input class="form-check-input chhhh1" type="checkbox" value="0"
+                                           id="flexCheckDefault1" onclick="handleCheckboxClick11(this)">
+                                    <label class="form-check-label" for="flexCheckChecked"
+                                           id="soucbbq12{{ product.id }}"></label>
+                                </div>
+
+                                <div class="form-check checker3">
+                                    <input class="form-check-input chhhh1" type="checkbox" value="0"
+                                           id="flexCheckDefault2" onclick="handleCheckboxClick12(this)">
+                                    <label class="form-check-label" for="flexCheckChecked"
+                                           id="soucbbq13{{ product.id }}"></label>
+                                </div>
+
+                                <div class="form-check checker4">
+                                    <input class="form-check-input chhhh1" type="checkbox" value="0"
+                                           id="flexCheckDefault3" onclick="handleCheckboxClick13(this)">
+                                    <label class="form-check-label" for="flexCheckChecked"
+                                           id="soucbb14{{ product.id }}">
+                                    </label>
+                                </div>
+                                <div class="form-check checker5">
+                                    <input class="form-check-input chhhh1" type="checkbox" value="0"
+                                           id="flexCheckDefault3" onclick="handleCheckboxClick15(this)">
+                                    <label class="form-check-label" for="flexCheckChecked"
+                                           id="soucbb15{{ product.id }}">
+                                    </label>
+                                </div>
+                                <div class="form-check checker6">
+                                    <input class="form-check-input chhhh1" type="checkbox" value="0"
+                                           id="flexCheckDefault3" onclick="handleCheckboxClick16(this)">
+                                    <label class="form-check-label" for="flexCheckChecked"
+                                           id="soucbb16{{ product.id }}">
+                                    </label>
+                                </div>
+                                <div class="form-check checker7">
+                                    <input class="form-check-input chhhh1" type="checkbox" value="0"
+                                           id="flexCheckDefault3" onclick="handleCheckboxClick17(this)">
+                                    <label class="form-check-label" for="flexCheckChecked"
+                                           id="soucbb17{{ product.id }}">
+                                    </label>
+                                </div>
+                                <div class="form-check checker8">
+                                    <input class="form-check-input chhhh1" type="checkbox" value="0"
+                                           id="flexCheckDefault3" onclick="handleCheckboxClick18(this)">
+                                    <label class="form-check-label" for="flexCheckChecked"
+                                           id="soucbb18{{ product.id }}">
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            <div class="pizza_coment">
+                                <div class="comment-field">
+                                                        <textarea class="form-control" id="commentModal{{ product.id }}"
+                                                                  name="commentModal"
+                                                                  rows="3"></textarea>
+                                    <label for="commentModal" class="comment-label">Коментар до замовлення</label>
+                                </div>
+                            </div>
+
+
+                            <div class="modal-footer">
+                                <h5 class="modal_price_pizza">від {{ product.price_for_view }} грн</h5>
+                                <div style="display:none;"
+                                     id="pizza_price{{ product.id }}">{{ product.price_for_view }}</div>
+
+
+                                <!-- Кнопка "Отправить" в модальном окне -->
+                                <button type="button" class="btn btn-outline-success btn_modal_rolu"
+                                        onclick="sendComment({{ product.id }})" data-product-id="{{ product.id }}"
+                                        id="final_button{{ product.product_id }}">
+                                    Додати до кошика
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+
+<div class="nuz" style="top: 140%">
+    <div class="carta_sity">Карта сайту</div>
+    <div class="polosha_orange_nuz"></div>
+
+    <div class="pro_nac">Про нас</div>
+
+
+    <div class="doctavka_nuz">
+        <a href="{% url 'dostavka' %}" style="text-decoration: none; color: white">Доставка та оплата</a>
+    </div>
+
+    <div class="pro_nac">
+        <a href="{% url 'about_us' %}" style="text-decoration: none; color: white">Про нас</a>
+    </div>
+
+
+    <div class="rolu_nuz">
+        <a href="/" style="text-decoration: none; color: white">Роли</a>
+    </div>
+
+    <div class="pizza_nuz">
+        <a href="/" style="text-decoration: none; color: white">Піца</a>
+
+    </div>
+    <div class="salate_nuz">
+        <a href="/" style="text-decoration: none; color: white">Салати</a>
+    </div>
+
+    <div class="gariche_nuz">
+        <a href="/" style="text-decoration: none; color: white">Гаряче</a>
+
+    </div>
+    <div class="ocnovni_nuz">
+        <a href="/" style="text-decoration: none; color: white">Основні страви</a>
+    </div>
+    <div class="garniru_nuz">
+        <a href="/" style="text-decoration: none; color: white">Гарніри</a>
+    </div>
+    <div class="supu_nuz">
+        <a href="/" style="text-decoration: none; color: white">Супи</a>
+    </div>
+    <div class="zakusku_nuz">
+        <a href="/" style="text-decoration: none; color: white">Закуски</a>
+    </div>
+
+    <div class="hold_nuz">
+        <a href="/" style="text-decoration: none; color: white">Холодні напої</a>
+    </div>
+
+    <div class="puvo_nuz">
+        <a href="/" style="text-decoration: none; color: white">Пиво</a>
+    </div>
+
+    <div class="contact_nuz">Контакти</div>
+    <div class="polosha_orange_nuz2"></div>
+    <div class="number_nuz">+38 (050) 012-01-01</div>
+    <div class="number_nuz2">+38 (066) 670-10-01</div>
+    <div class="email_nuz">chef.in.ua@gmail.com</div>
+    <div class="adress_nuz">Катерининська площа, Одеса, Одеська область, 65000</div>
+    <img class="instagram" src="{% static 'store/img/instagram.png' %}" alt="logo">
+    <img class="telegram" src="{% static 'store/img/telegram.png' %}" alt="logo">
+    <img class="viber" src="{% static 'store/img/viber.png' %}" alt="logo">
+    <img class="facebook" src="{% static 'store/img/facebook.png' %}" alt="logo">
+    <div class="prava_nuz">© 2023 | Усі права захищені</div>
+
+    <header>
+        <div class="back_niz">
+            <div class="header">
+                <div class="rounded-gradient-border container_logo">
+                    <div class="rounded-logo">
+                        <img class="imm" src="{% static 'store/img/logoi.svg' %}" alt="logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <a href="https://www.instagram.com/chef_in_odessa/">
+        <img class="instagram" src="{% static 'store/img/instagram.png' %}" alt="logo">
+    </a>
+    <a href="https://t.me/Chefinodesabot">
+        <img class="telegram" src="{% static 'store/img/telegram.png' %}" alt="logo">
+    </a>
+    <img class="viber" src="{% static 'store/img/viber.png' %}" alt="logo">
+    <a href="https://www.facebook.com/chef.in.ua/">
+        <img class="facebook" src="{% static 'store/img/facebook.png' %}" alt="logo">
+    </a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+
+<script src="{% static 'store/js/index.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+
+let checkboxValu18;
+    let checkboxValu17;
+    let checkboxValu16;
+    let checkboxValu15;
+    let checkboxValu13;
+    let checkboxValu12;
+    let checkboxValu11;
+    let checkboxValu0;
+
+    function handleCheckboxClick18(checkbox) {
+        if (checkbox.checked) {
+            checkbox.value = "1";
+            if (checkbox.value === "1") {
+                checkboxValu18 = checkbox.value;
+
+
+            }
+        } else {
+            checkbox.value = "0";
+            checkboxValu18 = checkbox.value;
+
+
+        }
+    }
+
+    function handleCheckboxClick17(checkbox) {
+        if (checkbox.checked) {
+            checkbox.value = "1";
+            if (checkbox.value === "1") {
+                checkboxValu17 = checkbox.value;
+
+
+            }
+        } else {
+            checkbox.value = "0";
+            checkboxValu17 = checkbox.value;
+
+
+        }
+    }
+
+    function handleCheckboxClick16(checkbox) {
+        if (checkbox.checked) {
+            checkbox.value = "1";
+            if (checkbox.value === "1") {
+                checkboxValu16 = checkbox.value;
+
+
+            }
+        } else {
+            checkbox.value = "0";
+            checkboxValu16 = checkbox.value;
+
+
+        }
+    }
+
+    function handleCheckboxClick15(checkbox) {
+        if (checkbox.checked) {
+            checkbox.value = "1";
+            if (checkbox.value === "1") {
+                checkboxValu15 = checkbox.value;
+
+
+            }
+        } else {
+            checkbox.value = "0";
+            checkboxValu15 = checkbox.value;
+
+
+        }
+    }
+
+    function handleCheckboxClick13(checkbox) {
+        if (checkbox.checked) {
+            checkbox.value = "1";
+            if (checkbox.value === "1") {
+                checkboxValu13 = checkbox.value;
+
+
+            }
+        } else {
+            checkbox.value = "0";
+            checkboxValu13 = checkbox.value;
+
+
+        }
+    }
+
+    function handleCheckboxClick12(checkbox) {
+        if (checkbox.checked) {
+            checkbox.value = "1";
+            if (checkbox.value === "1") {
+                checkboxValu12 = checkbox.value;
+
+            }
+        } else {
+            checkbox.value = "0";
+            checkboxValu12 = checkbox.value;
+
+        }
+    }
+
+    function handleCheckboxClick11(checkbox) {
+        if (checkbox.checked) {
+            checkbox.value = "1";
+            if (checkbox.value === "1") {
+                checkboxValu11 = checkbox.value;
+
+            }
+        } else {
+            checkbox.value = "0";
+            checkboxValu11 = checkbox.value;
+        }
+    }
+
+    function handleCheckboxClick0(checkbox) {
+        if (checkbox.checked) {
+            checkbox.value = "1";
+            if (checkbox.value === "1") {
+                checkboxValu0 = checkbox.value;
+            }
+        } else {
+            checkbox.value = "0";
+            checkboxValu0 = checkbox.value;
+        }
+    }
+
+    let basket_name1 = [];
+    let basketprice1 = [];
+    let basketproduct_poster1 = [];
+    let basket_image1 = []
+
+
+    {% for product in products %}
+        {% if product.category == 'Соус роли' %}
+            basket_name1.push('{{ product.name }}');
+            basketprice1.push('{{ product.price }}');
+            basketproduct_poster1.push('{{ product.product_id }}');
+            basket_image1.push('{{ product.image }}');
+        {% endif %}
+    {% endfor %}
+    {% for product in products %}
+        {% if product.category == 'Роли' %}
+            let soucbbq18{{ product.id }} = document.getElementById('soucbb18{{ product.id }}');
+            if (soucbbq18{{ product.id }}) {
+                soucbbq18{{ product.id }}.innerHTML = basket_name1[7] + ' <span style="color: #E1643C;">+ ' + (basketprice1[7] / 100) + ' грн' + '</span>' + '<div style="display: none" id="sousu_product_poste18">' + basketproduct_poster1[7] + '</div>' + '<div style="display: none" id="sousu_product_poster_name18">' + basket_name1[7] + '</div>' + '<div style="display: none" id="sousu_product_poster_image18">' + basket_image1[7] + '</div>' + '<div style="display:none;" id="sousu_product_poster_price18">' + (basketprice1[7] / 100) + '</div>';
+            }
+        {% endif %}
+    {% endfor %}
+    {% for product in products %}
+        {% if product.category == 'Роли' %}
+            let soucbbq17{{ product.id }} = document.getElementById('soucbb17{{ product.id }}');
+            if (soucbbq17{{ product.id }}) {
+                soucbbq17{{ product.id }}.innerHTML = basket_name1[6] + ' <span style="color: #E1643C;">+ ' + (basketprice1[6] / 100) + ' грн' + '</span>' + '<div style="display: none" id="sousu_product_poste17">' + basketproduct_poster1[6] + '</div>' + '<div style="display: none" id="sousu_product_poster_name17">' + basket_name1[6] + '</div>' + '<div style="display: none" id="sousu_product_poster_image17">' + basket_image1[6] + '</div>' + '<div style="display:none;" id="sousu_product_poster_price17">' + (basketprice1[6] / 100) + '</div>';
+            }
+        {% endif %}
+    {% endfor %}
+    {% for product in products %}
+        {% if product.category == 'Роли' %}
+            let soucbbq16{{ product.id }} = document.getElementById('soucbb16{{ product.id }}');
+            if (soucbbq16{{ product.id }}) {
+                soucbbq16{{ product.id }}.innerHTML = basket_name1[5] + ' <span style="color: #E1643C;">+ ' + (basketprice1[5] / 100) + ' грн' + '</span>' + '<div style="display: none" id="sousu_product_poste16">' + basketproduct_poster1[5] + '</div>' + '<div style="display: none" id="sousu_product_poster_name16">' + basket_name1[5] + '</div>' + '<div style="display: none" id="sousu_product_poster_image16">' + basket_image1[5] + '</div>' + '<div style="display:none;" id="sousu_product_poster_price16">' + (basketprice1[5] / 100) + '</div>';
+            }
+        {% endif %}
+    {% endfor %}
+
+    {% for product in products %}
+        {% if product.category == 'Роли' %}
+            let soucbbq15{{ product.id }} = document.getElementById('soucbb15{{ product.id }}');
+            if (soucbbq15{{ product.id }}) {
+                soucbbq15{{ product.id }}.innerHTML = basket_name1[4] + ' <span style="color: #E1643C;">+ ' + (basketprice1[4] / 100) + ' грн' + '</span>' + '<div style="display: none" id="sousu_product_poste15">' + basketproduct_poster1[4] + '</div>' + '<div style="display: none" id="sousu_product_poster_name15">' + basket_name1[4] + '</div>' + '<div style="display: none" id="sousu_product_poster_image15">' + basket_image1[4] + '</div>' + '<div style="display:none;" id="sousu_product_poster_price15">' + (basketprice1[4] / 100) + '</div>';
+            }
+        {% endif %}
+    {% endfor %}
+
+    {% for product in products %}
+        {% if product.category == 'Роли' %}
+            let soucbbq14{{ product.id }} = document.getElementById('soucbb14{{ product.id }}');
+            if (soucbbq14{{ product.id }}) {
+                soucbbq14{{ product.id }}.innerHTML = basket_name1[0] + ' <span style="color: #E1643C;">+ ' + (basketprice1[0] / 100) + ' грн' + '</span>' + '<div style="display: none" id="sousu_product_poste0">' + basketproduct_poster1[0] + '</div>' + '<div style="display: none" id="sousu_product_poster_name0">' + basket_name1[0] + '</div>' + '<div style="display: none" id="sousu_product_poster_image0">' + basket_image1[0] + '</div>' + '<div style="display:none;" id="sousu_product_poster_price0">' + (basketprice1[0] / 100) + '</div>';
+            }
+        {% endif %}
+    {% endfor %}
+
+    {% for product in products %}
+        {% if product.category == 'Роли' %}
+            let soucbbq3{{ product.id }} = document.getElementById('soucbbq13{{ product.id }}');
+            if (soucbbq3{{ product.id }}) {
+                soucbbq3{{ product.id }}.innerHTML = basket_name1[1] + ' <span style="color: #E1643C;">+ ' + (basketprice1[1] / 100) + ' грн' + '</span>' + '<div style="display: none" id="sousu_product_poste13">' + basketproduct_poster1[1] + '</div>' + '<div style="display: none" id="sousu_product_poster_name13">' + basket_name1[1] + '</div>' + '<div style="display: none" id="sousu_product_poster_image13">' + basket_image1[1] + '</div>' + '<div style="display:none;" id="sousu_product_poster_price13">' + (basketprice1[1] / 100) + '</div>';
+            }
+        {% endif %}
+    {% endfor %}
+    {% for product in products %}
+        {% if product.category == 'Роли' %}
+            let soucbbq2{{ product.id }} = document.getElementById('soucbbq12{{ product.id }}');
+            if (soucbbq2{{ product.id }}) {
+                soucbbq2{{ product.id }}.innerHTML = basket_name1[2] + ' <span style="color: #E1643C;">+ ' + (basketprice1[2] / 100) + ' грн' + '</span>' + '<div style="display: none" id="sousu_product_poste12">' + basketproduct_poster1[2] + '</div>' + '<div style="display: none" id="sousu_product_poster_name12">' + basket_name1[2] + '</div>' + '<div style="display: none" id="sousu_product_poster_image12">' + basket_image1[2] + '</div>' + '<div style="display:none;" id="sousu_product_poster_price12">' + (basketprice1[2] / 100) + '</div>';
+            }
+        {% endif %}
+    {% endfor %}
+    {% for product in products %}
+        {% if product.category == 'Роли' %}
+            let soucbbq{{ product.id }} = document.getElementById('soucbbq0{{ product.id }}');
+            if (soucbbq{{ product.id }}) {
+                soucbbq{{ product.id }}.innerHTML = basket_name1[3] + ' <span style="color: #E1643C;">+ ' + (basketprice1[3] / 100) + ' грн' + '</span>' + '<div style="display: none" id="sousu_product_poste14">' + basketproduct_poster1[3] + '</div>' + '<div style="display: none" id="sousu_product_poster_name14">' + basket_name1[3] + '</div>' + '<div style="display: none" id="sousu_product_poster_image14">' + basket_image1[3] + '</div>' + '<div style="display:none;" id="sousu_product_poster_price14">' + (basketprice1[3] / 100) + '</div>';
+            }
+        {% endif %}
+    {% endfor %}
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var addToCartButtons = document.querySelectorAll('.btn_modal_rolu');
+
+
+        addToCartButtons.forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                event.preventDefault();
+
+
+                let commentId = button.getAttribute('data-product-id');
+                var product_poster = document.getElementById('product_final_' + commentId).textContent;
+                var comment = document.getElementById('commentModal' + commentId).value;
+                let exampleModalLabelid = 'exampleModalLabel' + commentId;
+                let product_name = document.getElementById(exampleModalLabelid).textContent;
+                var descriptionClass = '.description_modal' + commentId;
+                var descriptionElement = document.querySelector(descriptionClass);
+                var description = descriptionElement.textContent;
+                let pizza_product = 'pizza_product_image' + commentId;
+                let pizza_product_image = document.getElementById(pizza_product).getAttribute('src');
+                let pizza_priceid = 'pizza_price' + commentId;
+                let pizza_price = document.getElementById(pizza_priceid).textContent;
+                let pizza_category = document.getElementById('pizza_category' + commentId).textContent
+
+
+                var url = '/baskets/add/' + product_poster + '/';
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    },
+                    body: JSON.stringify({
+                        comment: comment,
+                        product_poster: product_poster,
+                        name: product_name,
+                        image: pizza_product_image,
+                        price: pizza_price,
+                        description: description,
+                        category: pizza_category,
+                    })
+                })
+                    .then(function (response) {
+                        if (response.ok) {
+
+                        }
+                        if (checkboxValu13 == '1') {
+                            var product_id = document.getElementById('sousu_product_poste0').textContent;
+                            let sousu_product_poster_name = document.getElementById('sousu_product_poster_name0').textContent;
+                            let sousu_product_poster_image = document.getElementById('sousu_product_poster_image0').textContent;
+                            let sousu_product_poster_price = document.getElementById('sousu_product_poster_price0').textContent;
+                            var url = '/baskets/add/' + product_id + '/';
+                            return fetch(url, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'X-CSRFToken': '{{ csrf_token }}'
+                                },
+                                body: JSON.stringify({
+                                    product_id: product_id,
+                                    name: sousu_product_poster_name,
+                                    image: sousu_product_poster_image,
+                                    price: sousu_product_poster_price
+                                })
+                            });
+                        } else {
+                            return Promise.resolve(); // Возвращаем успешно выполненный промис, если нет необходимости во втором фетч-запросе
+                        }
+
+                    })
+                    .then(function (response) {
+                        if (response && response.ok) {
+                        }
+                        if (checkboxValu12 == '1') {
+                            var product_id3 = document.getElementById('sousu_product_poste13').textContent;
+                            let sousu_product_poster_name3 = document.getElementById('sousu_product_poster_name13').textContent;
+                            let sousu_product_poster_image3 = document.getElementById('sousu_product_poster_image13').textContent;
+                            let sousu_product_poster_price3 = document.getElementById('sousu_product_poster_price13').textContent;
+                            var url = '/baskets/add/' + product_id3 + '/';
+                            return fetch(url, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'X-CSRFToken': '{{ csrf_token }}'
+                                },
+                                body: JSON.stringify({
+                                    product_id: product_id3,
+                                    name: sousu_product_poster_name3,
+                                    image: sousu_product_poster_image3,
+                                    price: sousu_product_poster_price3
+                                })
+                            });
+                        } else {
+                            return Promise.resolve(); // Возвращаем успешно выполненный промис, если нет необходимости в третьем фетч-запросе
+                        }
+
+                    })
+                    .then(function (response) {
+                        if (response && response.ok) {
+                        }
+                        fetchCartItems()
+
+                        if (checkboxValu11 == '1') {
+                            var product_id2 = document.getElementById('sousu_product_poste12').textContent;
+                            let sousu_product_poster_name2 = document.getElementById('sousu_product_poster_name12').textContent;
+                            let sousu_product_poster_image2 = document.getElementById('sousu_product_poster_image12').textContent;
+                            let sousu_product_poster_price2 = document.getElementById('sousu_product_poster_price12').textContent;
+                            var url = '/baskets/add/' + product_id2 + '/';
+                            return fetch(url, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'X-CSRFToken': '{{ csrf_token }}'
+                                },
+                                body: JSON.stringify({
+                                    product_id: product_id2,
+                                    name: sousu_product_poster_name2,
+                                    image: sousu_product_poster_image2,
+                                    price: sousu_product_poster_price2
+                                })
+                            });
+                        } else {
+                            return Promise.resolve(); // Возвращаем успешно выполненный промис, если нет необходимости в четвертом фетч-запросе
+                        }
+                    })
+                    .then(function (response) {
+                        if (response && response.ok) {
+                            // Все фетч-запросы успешно выполнены
+                        }
+                        if (checkboxValu0 == '1') {
+                            var product_id4 = document.getElementById('sousu_product_poste14').textContent;
+                            let sousu_product_poster_name4 = document.getElementById('sousu_product_poster_name14').textContent;
+                            let sousu_product_poster_image4 = document.getElementById('sousu_product_poster_image14').textContent;
+                            let sousu_product_poster_price4 = document.getElementById('sousu_product_poster_price14').textContent;
+                            var url = '/baskets/add/' + product_id4 + '/';
+                            return fetch(url, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'X-CSRFToken': '{{ csrf_token }}'
+                                },
+                                body: JSON.stringify({
+                                    product_id: product_id4,
+                                    name: sousu_product_poster_name4,
+                                    image: sousu_product_poster_image4,
+                                    price: sousu_product_poster_price4
+                                })
+                            });
+                        } else {
+                            return Promise.resolve(); // Возвращаем успешно выполненный промис, если нет необходимости в четвертом фетч-запросе
+                        }
+                    })
+                    .then(function (response) {
+                        if (response && response.ok) {
+                            // Все фетч-запросы успешно выполнены
+                        }
+                        if (checkboxValu15 == '1') {
+                            var product_id5 = document.getElementById('sousu_product_poste15').textContent;
+                            let sousu_product_poster_name5 = document.getElementById('sousu_product_poster_name15').textContent;
+                            let sousu_product_poster_image5 = document.getElementById('sousu_product_poster_image15').textContent;
+                            let sousu_product_poster_price5 = document.getElementById('sousu_product_poster_price15').textContent;
+                            var url = '/baskets/add/' + product_id5 + '/';
+                            return fetch(url, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'X-CSRFToken': '{{ csrf_token }}'
+                                },
+                                body: JSON.stringify({
+                                    product_id: product_id5,
+                                    name: sousu_product_poster_name5,
+                                    image: sousu_product_poster_image5,
+                                    price: sousu_product_poster_price5
+                                })
+                            });
+                        } else {
+                            return Promise.resolve(); // Возвращаем успешно выполненный промис, если нет необходимости в четвертом фетч-запросе
+                        }
+                    })
+                    .then(function (response) {
+                        if (response && response.ok) {
+                            // Все фетч-запросы успешно выполнены
+                        }
+                        if (checkboxValu16 == '1') {
+                            var product_id6 = document.getElementById('sousu_product_poste16').textContent;
+                            let sousu_product_poster_name6 = document.getElementById('sousu_product_poster_name16').textContent;
+                            let sousu_product_poster_image6 = document.getElementById('sousu_product_poster_image16').textContent;
+                            let sousu_product_poster_price6 = document.getElementById('sousu_product_poster_price16').textContent;
+                            var url = '/baskets/add/' + product_id6 + '/';
+                            return fetch(url, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'X-CSRFToken': '{{ csrf_token }}'
+                                },
+                                body: JSON.stringify({
+                                    product_id: product_id6,
+                                    name: sousu_product_poster_name6,
+                                    image: sousu_product_poster_image6,
+                                    price: sousu_product_poster_price6
+                                })
+                            });
+                        } else {
+                            return Promise.resolve(); // Возвращаем успешно выполненный промис, если нет необходимости в четвертом фетч-запросе
+                        }
+                    })
+                    .then(function (response) {
+                        if (response && response.ok) {
+                            // Все фетч-запросы успешно выполнены
+                        }
+                        if (checkboxValu17 == '1') {
+                            var product_id7 = document.getElementById('sousu_product_poste17').textContent;
+                            let sousu_product_poster_name7 = document.getElementById('sousu_product_poster_name17').textContent;
+                            let sousu_product_poster_image7 = document.getElementById('sousu_product_poster_image17').textContent;
+                            let sousu_product_poster_price7 = document.getElementById('sousu_product_poster_price17').textContent;
+                            var url = '/baskets/add/' + product_id7 + '/';
+                            return fetch(url, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'X-CSRFToken': '{{ csrf_token }}'
+                                },
+                                body: JSON.stringify({
+                                    product_id: product_id7,
+                                    name: sousu_product_poster_name7,
+                                    image: sousu_product_poster_image7,
+                                    price: sousu_product_poster_price7
+                                })
+                            });
+                        } else {
+                            return Promise.resolve(); // Возвращаем успешно выполненный промис, если нет необходимости в четвертом фетч-запросе
+                        }
+                    })
+                    .then(function (response) {
+                        if (response && response.ok) {
+                            // Все фетч-запросы успешно выполнены
+                        }
+                        if (checkboxValu18 == '1') {
+                            var product_id8 = document.getElementById('sousu_product_poste18').textContent;
+                            let sousu_product_poster_name8 = document.getElementById('sousu_product_poster_name18').textContent;
+                            let sousu_product_poster_image8 = document.getElementById('sousu_product_poster_image18').textContent;
+                            let sousu_product_poster_price8 = document.getElementById('sousu_product_poster_price18').textContent;
+                            var url = '/baskets/add/' + product_id8 + '/';
+                            return fetch(url, {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'X-CSRFToken': '{{ csrf_token }}'
+                                },
+                                body: JSON.stringify({
+                                    product_id: product_id8,
+                                    name: sousu_product_poster_name8,
+                                    image: sousu_product_poster_image8,
+                                    price: sousu_product_poster_price8
+                                })
+                            });
+                        } else {
+                            return Promise.resolve(); // Возвращаем успешно выполненный промис, если нет необходимости в четвертом фетч-запросе
+                        }
+                    })
+                    .then(function (response) {
+                        if (response && response.ok) {
+                            // Все фетч-запросы успешно выполнены
+                        }
+
+                    })
+                    .catch(function (error) {
+                        // Обработка ошибок
+                    });
+            });
+        });
+    });
+
+    function fetchCartItems() {
+        fetch('/cart/info/')
+            .then(function (response) {
+                if (response.ok) {
+                    return response.json();
+                }
+            })
+            .then(function (data) {
+                var productPosters = data.product_posters; // Получение списка product_poster
+                console.log(productPosters); // Вывод списка product_poster в консоль
+
+                // Изменение текста кнопки на Товар у кошику
+                productPosters.filter(Boolean).forEach(function (productPoster) {
+                    var buttonId = 'final_button' + productPoster;
+                    var button = document.getElementById(buttonId);
+                    let buttondodatu = 'dodatu' + productPoster;
+                    let buttonknopka = document.getElementById(buttondodatu);
+                    // Проверяем, есть ли button и buttonknopka на странице
+                    if (button && buttonknopka) {
+                        // Если есть, то меняем их текст
+                        buttonknopka.innerText = 'Товар у кошику';
+                        button.innerText = 'Товар у кошику';
+                    }
+                });
+            })
+            .catch(function (error) {
+                console.log('Error fetching cart items:', error);
+            });
+    }
+
+    fetchCartItems()
+
+
+    $(document).ready(function () {
+        $(".card-title.my-title a").each(function () {
+            if ($(this).text().length > 21) {
+                $(this).addClass("short-name");
+            }
+            if ($(this).text().length > 26) {
+                $(this).addClass("short-name1");
+            }
+        });
+    });
+
+    function toggleLanguage() {
+        var toggle = document.getElementById("languageToggle");
+        var currentLanguage = toggle.innerText;
+
+        if (currentLanguage === "RU") {
+            toggle.innerText = "UA";
+        } else {
+            toggle.innerText = "RU";
+        }
+    }
+
+    $(document).ready(function () {
+        $(".modal-title").each(function () {
+            if ($(this).text().length > 22) {
+                $(this).addClass("modal-title_large");
+            }
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var searchForm = document.querySelector(".search-panel form");
+        var searchIcon = document.querySelector("#search-icon");
+
+        searchIcon.addEventListener("click", function (event) {
+            event.preventDefault();
+            searchForm.submit();
+        });
+    });
+
+
+    $(document).ready(function () {
+        // Получаем последний элемент перед элементом .nuz
+        var lastElement = $(".nuz").prev();
+
+        // Вычисляем новое значение top
+        var newTop = lastElement.offset().top + lastElement.outerHeight() * 1.15;
+
+        // Устанавливаем новое значение top для элемента .nuz
+        $(".nuz").css("top", newTop);
+    });
+
+      $(document).ready(function () {
+        $(".modal-title").each(function () {
+            if ($(this).text().length > 22) {
+                $(this).addClass("modal-title_large");
+            }
+        });
+    });
+
+       $(document).ready(function () {
+        $(".card-title.my-title a").each(function () {
+            if ($(this).text().length > 21) {
+                $(this).addClass("short-name");
+            }
+            if ($(this).text().length > 26) {
+                $(this).addClass("short-name1");
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,687 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!-- Подключение стилей и скриптов для flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+{#    <link rel="stylesheet" href="{% static 'store/css/basket.css' %}">#}
+    <link rel="stylesheet" href="{% static 'store/css/zayvka.css' %}">
+</head>
+
+<body>
+<div class="verx">
+    <div class="dostavka_verx1">
+        <a href="/" style="text-decoration: none; color: white;margin-left: -80%;">Головна</a>
+    </div>
+    <div class="dostavka_verx">
+        <a href="{% url 'dostavka' %}" style="text-decoration: none; color: white">Доставка та оплата</a>
+    </div>
+    <div class="vakansiy_verx">Вакансії</div>
+    <div class="pro_verx">Про нас</div>
+    <div class="spivrobitnuchtvo_verx spp">Співробітництво</div>
+
+{#    <div id="languageToggle" onclick="toggleLanguage()">UA</div>#}
+
+
+    <div class="search-panel">
+        <form action="{% url 'search' %}" method="get">
+            <input id="search-input" type="text" name="q" placeholder="Пошук товарів">
+            <img id="search-icon" src="{% static 'store/img/lupa.svg' %}" alt="Search Icon">
+        </form>
+    </div>
+
+    <div class="header">
+        <div class="rounded-gradient-border container_logo">
+            <div class="rounded-logo">
+                <a href="/">
+                    <img class="imm" src="{% static 'store/img/logoi.svg' %}" alt="logo">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <<div class="call">
+        <img class="call_img_verx" src="{% static 'store/img/call.svg' %}" onclick="window.open('tel:+380660120101')">
+        <a href="tel:+380660120101"></a>
+
+    </div>
+
+     <a href="{% url 'profile' %}" class="korzuna_verx">
+        <img class="corzina_img_verx" src="{% static 'store/img/solar_cart-bold.svg' %}">
+    </a>
+
+    <div class="phone-numbers">
+        <span class="orange-number1">+38 (050) </span>
+        <span class="orange-number2">+38 (066) </span>
+        <span class="white-number1"> 012-01-01</span>
+        <span class="white-number2"> 670-10-01</span>
+    </div>
+</div>
+
+
+<a href="/" class="link_roli_zayvka">Головна </a>
+<a href="{% url 'profile' %}" class="link_roli22">/ Кошик</a>
+<a class="link_oformleeny">/ Оформлення замовлення</a>
+
+
+<div class="oformlenia_zamovleny">Оформлення замовлення</div>
+
+
+<form id="orderForm" method="POST" action="{% url 'add_to_cart' %}">
+    {% csrf_token %}
+    <div class="block_chernui">
+        <p class="ocobusti_danni">Особисті дані</p>
+
+        <input class="name" type="text" name="name" placeholder="Ваше ім'я*" required/>
+        <input class="number" type="tel" name="number" placeholder="Ваш телефон +380*" oninput="changeHandler(this)" required/>
+    <script>
+        const changeHandler = e => {
+        const value = e.value;
+        e.value = value.replace(/[^0-9+]/g, ""); // Заменяем все символы, кроме цифр и "+", на пустую строку
+    }
+    </script>
+
+        <div class="delivery">
+            <button class="delivery-button">Доставка</button>
+            <img class="delivery-image" src="{% static 'store/img/line.png' %}" alt="Линия доставки">
+        </div>
+        <input class="street" type="text" name="street" placeholder="Вулиця*" required/>
+        <input class="home_number" type="text" name="home_number" placeholder="Номер будинку*" required/>
+        <input class="home_gear" type="text" name="home_gear" placeholder="Поверх(не обов'язково)"/>
+        <input class="home_room" type="text" name="home_room" placeholder="Квартира(не обов'язково)"/>
+
+{#        <div class="validator_number" style="display: none" id="validator_number">Ведить правильно номер +380..........</div>#}
+{#        <div class="validator_street" style="display: none" id="validator_street">Ведить вулицю</div>#}
+{#        <div class="validator_home_number" style="display: none" id="validator_home_number">Ведить номер будинка</div>#}
+  <script>
+            var validatorValue = {{ validator|default_if_none:"null" }};
+
+        // Ваш код JavaScript для обработки значения validatorValue
+        // Например, вывод значения в консоль браузера
+         if (validatorValue == '1'){
+         {#validator_number = document.getElementById('validator_number')#}
+         {#validator_street = document.getElementById('validator_street')#}
+         {#validator_home_number = document.getElementById('validator_home_number')#}
+         {#validator_number.style.display = ''#}
+         {#validator_street.style.display = ''#}
+         {#validator_home_number.style.display = ''#}
+             var street = document.getElementsByClassName('street')[0]; // Получаем первый элемент с классом "street"
+            var number = document.getElementsByClassName('number')[0]; // Получаем первый элемент с классом "home_number"
+            var home_number = document.getElementsByClassName('home_number')[0]; // Получаем первый элемент с классом "home_number"
+
+            street.style.color = 'red'; // Изменяем цвет текста поля "street" на красный
+            home_number.style.color = 'red'; // Изменяем цвет текста поля "home_number" на красный
+            number.style.color = 'red'; // Изменяем цвет текста поля "home_number" на красный
+         } else if (validatorValue == '2'){
+             var number = document.getElementsByClassName('number')[0];
+             number.style.color = 'red';
+         }
+        </script>
+        <div class="pickup">
+            <button class="pickup-button">Самовивіз</button>
+            <img class="pickup-line" src="{% static 'store/img/line.png' %}" alt="Линия доставки">
+
+        </div>
+
+
+        <input type="hidden" name="type_dostavki" id="type_dostavki_input" value="">
+
+
+        {% if 'Піца' in category %}
+            <p class="pickup-info">Адреса нашого закладу</p>
+            <a class="adres_1"
+               href="https://www.google.com/maps/search/?api=1&query=вул.+Івана+та+Юрія+Лип+60,+Одеса,+Одеська+область,+65000"
+               target="_blank">
+                <img src="{% static 'store/img/ph_map-pin-duotone.png' %} " alt="Изображение">
+                вул. Івана та Юрія Лип, 60, Одеса, Одеська область, 6500
+            </a>
+
+        {% else %}
+            <p class="pickup-info">Оберiть заклад з якого заберете замовлення</p>
+            <a class="adres_1"
+               href="https://www.google.com/maps/search/?api=1&query=вул.+Івана+та+Юрія+Лип+60,+Одеса,+Одеська+область,+65000"
+               target="_blank">
+                <img src="{% static 'store/img/ph_map-pin-duotone.png' %} " alt="Изображение">
+                вул. Івана та Юрія Лип, 60, Одеса, Одеська область, 6500
+            </a>
+
+            <a class="adres_2"
+               href="https://www.google.com/maps/search/?api=1&query=Катерининська+площа,+Одеса,+Одеська+область,+65000"
+               target="_blank">
+                <img src="{% static 'store/img/ph_map-pin-duotone.png' %}" alt="Изображение">
+                Катерининська площа, Одеса, Одеська область, 65000
+            </a>
+
+            <div class="form-check checker_zaklad1">
+                <input class="form-check-input dont_call  ch_w_1" type="checkbox" value="" id="checker_zaklad1">
+                <input type="hidden" name="checker_zaklad1" id="hidden_checker_zaklad1" value="">
+            </div>
+
+            <div class="form-check checker_zaklad2">
+                <input class="form-check-input dont_call ch_w_2" type="checkbox" value="" id="checker_zaklad2">
+            </div>
+        {% endif %}
+
+        <p class="delivery_time">Введiть зручний для Вас час</p>
+        <input class="choose_delivery_time" type="text" name="delivery_time" placeholder="Введіть зручний для Вас час"/>
+
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+        <script>
+
+// Получение элемента поля выбора времени
+var inputElement = document.querySelector('.choose_delivery_time');
+
+// Установка временной зоны Киева (GMT+3)
+var kievOffset = 3; // Смещение Киева относительно GMT (в часах)
+
+// Создание объекта Date для представления текущего времени пользователя
+var currentDate = new Date();
+
+// Добавление 30 минут к текущему времени
+currentDate.setMinutes(currentDate.getMinutes() + 30);
+
+// Создание объекта Date для представления текущего времени Киева с добавлением 30 минут
+var kievTime = new Date(currentDate.getTime() + kievOffset * 60 * 60 * 1000);
+
+// Функция для получения текущего времени Киева в формате 'H:i'
+function getCurrentKievTime() {
+    return kievTime.toISOString().slice(11, 16); // Формат 'H:i'
+}
+
+// Преобразование даты и времени в формат YYYY-MM-DD HH:mm:ss
+var formattedDateTime = kievTime.toISOString().slice(0, 19).replace('T', ' ');
+
+// Установка значения в поле выбора времени
+inputElement.value = formattedDateTime;
+
+// Инициализация flatpickr для поля выбора времени
+flatpickr(inputElement, {
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: 'Y-m-d H:i:S', // Используем формат даты и времени с нулем перед секундами
+    time_24hr: true,
+    minTime: getCurrentKievTime(), // Устанавливаем динамический minTime
+    maxTime: '23:00',
+    // Другие настройки, если необходимо
+});
+
+        </script>
+
+
+        <p class="delivery_persons">Кількість персон</p>
+        <input class="delivery_count" type="text" name="delivery_count" placeholder="1" value="1"/>
+
+
+        <p class="oplata_type">Розрахунок</p>
+
+
+        <input type="hidden" name="type_rozrahynky" id="type_rozrahynky_input" value="">
+
+
+        <div class="button_na_cash">
+            <button class="cash" id="cash" value="1" onclick="cash()">
+                <div class="roundd_gotiv" id="roundd_gotiv">
+                    <img src="{% static 'store/img/cash_img_white.png' %}" alt="Изображение" class="cash_img"
+                         id="cash_photo">
+                </div>
+                Готівкою при отриманні
+
+            </button>
+        </div>
+
+
+        <div class="button_na_cash_online">
+            <button class="cash_online" value="2" onclick="cash_online()" id="cash_online">
+                <div class="roundd" id="roundd">
+                    <img src="{% static 'store/img/online_cash_orange.png' %}" alt="Изображение" class="cash_img"
+                         id="cash_online_photo">
+                </div>
+                Сплатити онлайн
+            </button>
+
+        </div>
+
+
+        <div class="button_na_delivery_cash">
+            <button class="delivery_cash" value="3" onclick="delivery_cash()" id="divilery_cash">
+                <div class="roundd_spavtu" id="roundd_spavtu">
+                    <img src="{% static 'store/img/cssshh.svg' %}" alt="Изображение" class="cash_img"
+                         id="dilivery_photo">
+                </div>
+                Сплатити картою при отриманні
+            </button>
+
+        </div>
+
+        <script>
+
+
+            var type_rozrahynky_input = document.getElementById('type_rozrahynky_input');
+            var type_rozrahynky;
+
+            document.addEventListener('DOMContentLoaded', function () {
+                var cashButton = document.getElementById('cash');
+                var cashOnlineButton = document.getElementById('cash_online');
+                var deliveryCashButton = document.getElementById('divilery_cash');
+                var cashOnlinePhoto = document.getElementById('cash_online_photo');
+                var cashPhoto = document.getElementById('cash_photo');
+                var deliveryPhoto = document.getElementById('dilivery_photo');
+                var paymentField = document.getElementById('payment');
+                const mediaQuery = window.matchMedia('(max-width: 614px)');
+
+                function cash() {
+                    handleButtonClick(1);
+                }
+
+                function cash_online() {
+                    handleButtonClick(2);
+                }
+
+                function delivery_cash() {
+                    handleButtonClick(3);
+
+                }
+
+
+                cashButton.addEventListener('click', cash);
+                cashOnlineButton.addEventListener('click', cash_online);
+                deliveryCashButton.addEventListener('click', delivery_cash);
+
+
+                function handleButtonClick(value) {
+                    if (mediaQuery.matches){
+                    cashOnlineButton.style.color = '#f3eeeb';
+                    cashOnlineButton.style.outline = '0px solid #f3eeeb';
+                    var roundd = document.getElementById('roundd');
+                    roundd.style.outline = '1px solid #f3eeeb';
+                    cashOnlinePhoto.src = "{% static 'store/img/online_cash.png' %}";
+
+                    cashButton.style.color = '#f3eeeb';
+                    cashButton.style.outline = '0px solid #f3eeeb';
+                    var rounddGotiv = document.getElementById('roundd_gotiv');
+                    rounddGotiv.style.outline = '1px solid #f3eeeb';
+                    cashPhoto.src = "{% static 'store/img/cash_img_white.png' %}";
+
+                    deliveryCashButton.style.color = '#f3eeeb';
+                    deliveryCashButton.style.outline = '0px solid #f3eeeb';
+                    var rounddSpavtu = document.getElementById('roundd_spavtu');
+                    rounddSpavtu.style.outline = '1px solid #f3eeeb';
+                    deliveryPhoto.src = "{% static 'store/img/cssshh.svg' %}";
+                    // Создаем медиа-запрос для ширины экрана не более 600px
+                    } else {
+                         cashOnlineButton.style.color = '#f3eeeb';
+                    cashOnlineButton.style.outline = '1px solid #f3eeeb';
+                    var roundd = document.getElementById('roundd');
+                    roundd.style.outline = '1px solid #f3eeeb';
+                    cashOnlinePhoto.src = "{% static 'store/img/online_cash.png' %}";
+
+                    cashButton.style.color = '#f3eeeb';
+                    cashButton.style.outline = '1px solid #f3eeeb';
+                    var rounddGotiv = document.getElementById('roundd_gotiv');
+                    rounddGotiv.style.outline = '1px solid #f3eeeb';
+                    cashPhoto.src = "{% static 'store/img/cash_img_white.png' %}";
+
+                    deliveryCashButton.style.color = '#f3eeeb';
+                    deliveryCashButton.style.outline = '1px solid #f3eeeb';
+                    var rounddSpavtu = document.getElementById('roundd_spavtu');
+                    rounddSpavtu.style.outline = '1px solid #f3eeeb';
+                    deliveryPhoto.src = "{% static 'store/img/cssshh.svg' %}";
+                    // Создаем медиа-запрос для ширины экрана не более 600px
+                    }
+
+
+                    if (value === 1) {
+                        if(mediaQuery.matches){
+                            cashButton.style.color = '#E1643C';
+                        cashButton.style.outline = '0px solid #E1643C';
+                        var rounddGotiv = document.getElementById('roundd_gotiv');
+                        rounddGotiv.style.outline = '1px solid #E1643C';
+                        cashPhoto.src = "{% static 'store/img/cash_img.png' %}";
+                        let orderForm = document.getElementById('orderForm');
+                        orderForm.action = '/gotivka/';
+                        type_rozrahynky_input.value = 1;
+                        console.log(type_rozrahynky_input.value)
+                        type_rozrahynky = 1;
+                        } else {
+                        cashButton.style.color = '#E1643C';
+                        cashButton.style.outline = '1px solid #E1643C';
+                        var rounddGotiv = document.getElementById('roundd_gotiv');
+                        rounddGotiv.style.outline = '1px solid #E1643C';
+                        cashPhoto.src = "{% static 'store/img/cash_img.png' %}";
+                        let orderForm = document.getElementById('orderForm');
+                        orderForm.action = '/gotivka/';
+                        type_rozrahynky_input.value = 1;
+                        console.log(type_rozrahynky_input.value)
+                        type_rozrahynky = 1;}
+                    } else if (value === 2) {
+                        if(mediaQuery.matches){
+                        cashOnlineButton.style.color = '#E1643C';
+                        cashOnlineButton.style.outline = '0px solid #E1643C';
+                        var roundd = document.getElementById('roundd');
+                        roundd.style.outline = '1px solid #E1643C';
+                        cashOnlinePhoto.src = "{% static 'store/img/online_cash_orange.png' %}";
+                        let orderForm = document.getElementById('orderForm');
+                        orderForm.action = '/add_to_cart/';
+                        type_rozrahynky_input.value = 2;
+                        console.log(type_rozrahynky_input.value)
+                        type_rozrahynky = 2;
+                        } else {
+                            cashOnlineButton.style.color = '#E1643C';
+                        cashOnlineButton.style.outline = '1px solid #E1643C';
+                        var roundd = document.getElementById('roundd');
+                        roundd.style.outline = '1px solid #E1643C';
+                        cashOnlinePhoto.src = "{% static 'store/img/online_cash_orange.png' %}";
+                        let orderForm = document.getElementById('orderForm');
+                        orderForm.action = '/add_to_cart/';
+                        type_rozrahynky_input.value = 2;
+                        console.log(type_rozrahynky_input.value)
+                        type_rozrahynky = 2;
+                        }
+                    } else if (value === 3) {
+                        if(mediaQuery.matches){
+                        deliveryCashButton.style.color = '#E1643C';
+                        deliveryCashButton.style.outline = '0px solid #E1643C';
+                        var rounddSpavtu = document.getElementById('roundd_spavtu');
+                        rounddSpavtu.style.outline = '1px solid #E1643C';
+                        deliveryPhoto.src = "{% static 'store/img/credit_cart_white.png' %}";
+                        let orderForm = document.getElementById('orderForm');
+                        orderForm.action = '/gotivka/';
+                        type_rozrahynky_input.value = 3;
+                        console.log(type_rozrahynky_input.value)
+                        type_rozrahynky = 3;
+                        }else {
+                            deliveryCashButton.style.color = '#E1643C';
+                        deliveryCashButton.style.outline = '1px solid #E1643C';
+                        var rounddSpavtu = document.getElementById('roundd_spavtu');
+                        rounddSpavtu.style.outline = '1px solid #E1643C';
+                        deliveryPhoto.src = "{% static 'store/img/credit_cart_white.png' %}";
+                        let orderForm = document.getElementById('orderForm');
+                        orderForm.action = '/gotivka/';
+                        type_rozrahynky_input.value = 3;
+                        console.log(type_rozrahynky_input.value)
+                        type_rozrahynky = 3;
+                        }
+                    }
+
+                    // Обновляем значение скрытого поля payment в зависимости от выбранной кнопки
+                    paymentField.value = value;
+
+                }
+            });
+
+            var type_dostavki_input = document.getElementById('type_dostavki_input');
+            var type_dostavki;
+
+            var dont_call_input = document.getElementById('dont_call_input');
+            var dont_call;
+
+            function validator(){
+                var nameField = document.querySelector('.name');
+                var numberField = document.querySelector('.number');
+                var streetField = document.querySelector('.street');
+                var homeNumberField = document.querySelector('.home_number');
+
+                var isPickupSelected = $(".pickup-button").hasClass("active");
+                var checkerZaklad1Value = $("#checker_zaklad1").val();
+
+                if (isPickupSelected) {
+
+
+                    // Если выбран самовывоз, проверяем только обязательные поля
+                    if (nameField.value.trim() === '' || numberField.value.trim() === '') {
+                        window.addEventListener('click', function () {
+                            location.reload();
+                        }, {once: true});
+                        return;
+                    }
+                } else {
+
+                    // Если выбрана доставка, проверяем все поля адреса
+                    if (nameField.value.trim() === '' || numberField.value.trim() === '' || streetField.value.trim() === '' || homeNumberField.value.trim() === '') {
+                        window.addEventListener('click', function () {
+                            location.reload();
+                        }, {once: true});
+                        return;
+                    }
+                }
+            }
+
+            document.getElementById('confirm_order').addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Проверка заполненности полей
+                var nameField = document.querySelector('.name');
+                var numberField = document.querySelector('.number');
+                var streetField = document.querySelector('.street');
+                var homeNumberField = document.querySelector('.home_number');
+
+                var isPickupSelected = $(".pickup-button").hasClass("active");
+                var checkerZaklad1Value = $("#checker_zaklad1").val();
+
+                if (isPickupSelected) {
+
+
+                    // Если выбран самовывоз, проверяем только обязательные поля
+                    if (nameField.value.trim() === '' || numberField.value.trim() === '') {
+                        alert('Пожалуйста, заполните все обязательные поля.');
+                        window.addEventListener('click', function () {
+                            location.reload();
+                        }, {once: true});
+                        return;
+                    }
+                } else {
+
+                    // Если выбрана доставка, проверяем все поля адреса
+                    if (nameField.value.trim() === '' || numberField.value.trim() === '' || streetField.value.trim() === '' || homeNumberField.value.trim() === '') {
+                        alert('Пожалуйста, заполните все обязательные поля.');
+                        window.addEventListener('click', function () {
+                            location.reload();
+                        }, {once: true});
+                        return;
+                    }
+                }
+
+
+                type_dostavki = type_dostavki_input.value;
+                dont_call = dont_call_input.value;
+
+                // Создание объекта FormData
+                var formData = new FormData();
+                formData.append('name', nameField.value);
+                formData.append('number', numberField.value);
+                formData.append('street', streetField.value);
+                formData.append('home_number', homeNumberField.value);
+                formData.append('checker_zaklad1', checkerZaklad1Value);
+                formData.append('type_rozrahynky_input', type_rozrahynky_input.value);
+                formData.append('type_rozrahynky', type_rozrahynky);
+                formData.append('type_dostavki', type_dostavki); // Добавление значения типа доставки
+                formData.append('dont_call', dont_call);
+
+                // Отправка AJAX-запроса на сервер
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/add_to_cart/', true);
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        console.log('Запрос успешно выполнен');
+                    } else if (xhr.readyState === 4 && xhr.status !== 200) {
+                        console.error('Произошла ошибка');
+                    }
+                };
+                xhr.send(formData);
+            });
+
+        </script>
+
+
+        <p class="comment_do_zakaza">Коментарій до замовлення</p>
+        <input class="comment_do_zakaza_pole" name="comment_do_zakaza" type="text" placeholder="Ваш коментарій*"/>
+
+
+        <button type="submit" id="confirm_order" onclick="validator() " class="btn btn-outline-success btn_add_to">
+            Підтвердити замовлення
+        </button>
+
+        <div class="samui_niz">© 2023 | Усі права захищені</div>
+
+        <div class="form-check checker_zv">
+            <input class="form-check-input dont_call" type="checkbox" value="" name="dont_call" id="dont_call_input">
+            <label class="form-check-label txtttt1" for="flexCheckDefault">
+                Мені можна не телефонувати для підтвердження замовлення
+            </label>
+        </div>
+    </div>
+</form>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var orderForm = document.getElementById('orderForm');
+        var submitButton = document.querySelector('.btn_add_to');
+        var otherButtons = document.querySelectorAll('button:not(.btn_add_to)');
+
+        submitButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            orderForm.submit();
+        });
+
+        otherButtons.forEach(function (button) {
+            button.setAttribute('type', 'button');
+        });
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var dontCallCheckbox = document.getElementById('dont_call_input');
+
+        dontCallCheckbox.addEventListener('click', function () {
+            var formData = new FormData(document.getElementById('orderForm'));
+            formData.set('dont_call', dontCallCheckbox.checked);
+        });
+    });
+
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        var type_dostavki; // Переменная для хранения значения типа доставки
+        var type_dostavki_input = $("#type_dostavki_input");
+        var oldCheckerZaklad1Value; // Переменная для хранения предыдущего значения поля checker_zaklad1
+        var oldCheckerZaklad2Value; // Переменная для хранения предыдущего значения поля checker_zaklad2
+
+
+        // Скрыть поля адреса и новые поля при загрузке страницы
+        $(".pickup-info, .pickup-line, .adres_1, .adres_2, .checker_zaklad1, .checker_zaklad2").hide();
+
+        // По умолчанию выбрана доставка
+        $(".delivery-button").addClass("active").css("color", "white");
+        $(".pickup-button").css("color", "#f3edec");
+        type_dostavki_input.val(3);
+
+        // Показать поля адреса при открытии страницы, если выбрана доставка
+        if ($(".delivery-button").hasClass("active")) {
+            $(".street, .home_number, .home_gear, .home_room").show();
+        } else {
+            $(".street, .home_number, .home_gear, .home_room").hide();
+        }
+
+        // Обработчик нажатия на кнопку "Доставка"
+        $(".delivery-button").click(function () {
+            if (!$(this).hasClass("active")) {
+                // Показать поля адреса
+                $(".street, .home_number, .home_gear, .home_room").show();
+                // Скрыть информацию о самовывозе и адресах
+                $(".pickup-info, .pickup-line, .adres_1, .adres_2").hide();
+                // Скрыть новые поля и сбросить значения
+                $(".checker_zaklad1, .checker_zaklad2").hide();
+                $("#checker_zaklad1").prop("checked", false);
+                $("#checker_zaklad2").prop("checked", false);
+                oldCheckerZaklad1Value = false;
+                oldCheckerZaklad2Value = false;
+                // Изменить стиль кнопки "Доставка"
+                $(this).addClass("active").css("color", "white");
+                // Изменить стиль кнопки "Самовивіз"
+                $(".pickup-button").removeClass("active").css("color", "#f3edec");
+                // Показать изображение доставки
+                $(".delivery-image").show();
+                $("#orderForm").find('[name="checker_zaklad1"]').val("");
+                type_dostavki = 3;
+                type_dostavki_input.val(type_dostavki);
+            }
+        });
+
+        // Обработчик нажатия на кнопку "Самовивіз"
+        $(".pickup-button").click(function () {
+            if (!$(this).hasClass("active")) {
+                // Скрыть поля адреса и сбросить значения
+                $(".street, .home_number, .home_gear, .home_room").hide().val("");
+                // Показать информацию о самовывозе и адресах
+                $(".pickup-info, .pickup-line, .adres_1, .adres_2").show();
+                // Показать новые поля и сбросить значения
+                $(".checker_zaklad1, .checker_zaklad2").show();
+                $("#checker_zaklad1").prop("checked", oldCheckerZaklad1Value);
+                $("#checker_zaklad2").prop("checked", oldCheckerZaklad2Value);
+                // Изменить стиль кнопки "Самовивіз"
+                $(this).addClass("active").css("color", "#f3edec");
+                // Изменить стиль кнопки "Доставка"
+                $(".delivery-button").removeClass("active").css("color", "white");
+                // Скрыть изображение доставки
+                $(".delivery-image").hide();
+                type_dostavki = 2;
+                type_dostavki_input.val(type_dostavki);
+            }
+        });
+
+        // Обработчик нажатия на поля checker_zaklad1 и checker_zaklad2
+        $("#checker_zaklad1, #checker_zaklad2").click(function () {
+            var checkboxId = $(this).attr("id");
+
+            if (checkboxId === "checker_zaklad1") {
+                // Сохранить текущее значение поля checker_zaklad1
+                oldCheckerZaklad1Value = $(this).prop("checked");
+                // Снять выбор с поля checker_zaklad2, если оно было активно
+                if (oldCheckerZaklad1Value) {
+                    $("#checker_zaklad2").prop("checked", false);
+                    oldCheckerZaklad2Value = false;
+                }
+            } else if (checkboxId === "checker_zaklad2") {
+                // Сохранить текущее значение поля checker_zaklad2
+                oldCheckerZaklad2Value = $(this).prop("checked");
+                // Снять выбор с поля checker_zaklad1, если оно было активно
+                if (oldCheckerZaklad2Value) {
+                    $("#checker_zaklad1").prop("checked", false);
+                    oldCheckerZaklad1Value = false;
+                }
+            }
+
+            // Обновить значение скрытого поля checker_zaklad1
+            $("#hidden_checker_zaklad1").val(oldCheckerZaklad1Value ? 1 : "");
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var searchForm = document.querySelector(".search-panel form");
+        var searchIcon = document.querySelector("#search-icon");
+
+        searchIcon.addEventListener("click", function (event) {
+            event.preventDefault();
+            searchForm.submit();
+        });
+    });
+
+</script>
+
+
+</body>
+</html>
